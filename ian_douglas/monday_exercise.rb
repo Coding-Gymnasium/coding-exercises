@@ -7,14 +7,9 @@
 
 class MondayExercise
 
-   @parents = ["(", ")"]
-   @brackets = ["[", "]"]
-   @curlies = ["{", "}"]
-
-    def is_valid(s)
-      # is the number or brackets[0] % 2 == 0 || is the number or brackets[1] % 2 == 0
+   def is_valid(s)
       return false if s.length.odd?
-      
+      strg = s.chars
       partners = {
           '('=> ')',
           '['=> ']',
@@ -22,7 +17,7 @@ class MondayExercise
       }
 
       stack = []
-      s.each do |ch|
+      strg.each do |ch|
         if partners[ch]
           stack << ch
         elsif partners.value? ch
@@ -35,4 +30,4 @@ class MondayExercise
       stack.empty?
    end
 end
-# not working
+

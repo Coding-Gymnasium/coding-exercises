@@ -10,6 +10,7 @@ class MondayExerciseTest < Minitest::Test
   end
 
   def test_parents_left_are_even
+    #skip
     m = MondayExercise.new
     refute m.is_valid('(((')
     assert m.is_valid('()()')
