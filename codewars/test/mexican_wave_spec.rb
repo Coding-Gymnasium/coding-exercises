@@ -8,15 +8,12 @@ RSpec.describe MexicanWave do
 
       result = ["Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS"]
       expect(wave1.wave("codewars")).to eq(result)
-      
       result = []
       expect(wave1.wave("")).to eq(result)
-      
       result = ["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"]
       expect(wave1.wave("two words")).to eq(result)
-      
       result = [" Gap ", " gAp ", " gaP "]
-      expect(wave1.wave("gap")).to eq(result)
+      expect(wave1.wave(" gap ")).to eq(result)
     end
   end
 end
