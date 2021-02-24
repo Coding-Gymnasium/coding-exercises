@@ -8,7 +8,8 @@ RSpec.describe EnoughIsEnough do
 
   it "Remove extra instances when it exceeds 'n'" do
     expect(@eie.delete_nth([1,1,1,1], 2)).to eq([1,1])
-    expect(@eie.delete_nth([20,37,20,21]), 1).to eq([20, 37, 21])
+    expect(@eie.delete_nth([20,37,20,21], 1)).to eq([20, 37, 21])
+    expect(@eie.delete_nth([1,2,3,1,1,2,1,2,3,3,2,4,5,3,1], 3)).to eq([1, 2, 3, 1, 1, 2, 2, 3, 3, 4, 5])
   end
 end
 
