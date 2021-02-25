@@ -8,7 +8,7 @@ RSpec.describe ToCamelCase do
 
   it "Can convert a string to camel case" do
     expect(@tcc.to_camel_case("the_stealth_warrior")).to eq("theStealthWarrior")
-    expect(@tcc.to_camel_case("The-Stealth-Warrior")).to eq("theStealthWarrior")
+    expect(@tcc.to_camel_case("The-Stealth-Warrior")).to eq("TheStealthWarrior")
     expect(@tcc.to_camel_case("the_stealth_warrior")).to eq("theStealthWarrior")
   end
 end
