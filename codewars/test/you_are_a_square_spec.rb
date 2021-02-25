@@ -2,18 +2,20 @@ require_relative '../lib/you_are_a_square'
 require 'pry'
 
 RSpec.describe Square do
-before :each do 
-  sq = Square.new
-end
+  before :each do
+    @sq = Square.new
+  end
 
-describe "is_square" do
-  it "should work for some examples" do
-    Test.assert_equals (is_square (-1)), false, "-1 is not a perfect square"
-    Test.assert_equals (is_square  0),   true,  "0 is a perfect square (0 * 0)"
-    Test.assert_equals (is_square  3),   false,  "3 is not a perfect square"
-    Test.assert_equals (is_square  4),    true,   "4 is a perfect square (2 * 2)"
-    Test.assert_equals (is_square 25),    true,  "25 is a perfect square (5 * 5)"
-    Test.assert_equals (is_square 26),   false, "26 is not a perfect square"
+  describe 'square?' do
+    it 'should work for some examples' do
+      expect(@sq.square?(-1)).to eq(false)
+      expect(@sq.square?(0)).to eq(true)
+      expect(@sq.square?(3)).to eq(false)
+      expect(@sq.square?(4)).to eq(true)
+      expect(@sq.square?(25)).to eq(true)
+      expect(@sq.square?(26)).to eq(false)
+    end
   end
 end
 
+# https://www.codewars.com/kata/54c27a33fb7da0db0100040e/ruby
