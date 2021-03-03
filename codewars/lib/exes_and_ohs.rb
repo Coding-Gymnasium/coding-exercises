@@ -1,7 +1,8 @@
 class ExesAndOhs
   def XO(str)
     str_arr = str.downcase.chars
-
+    both_present = (str_arr.include?('o') && str_arr.include?('x') || !str_arr.include?('o') && !str_arr.include?('x')) 
+    both_present && str_arr.count('o') == str_arr.count('x')
   end
 end
 
