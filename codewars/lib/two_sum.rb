@@ -3,9 +3,10 @@ class TwoSum
     result = []
     numbers.find do |element|
       substraction = target - element
-      indexes = []
-      numbers.each_with_index { |num, ind| num == element && indexes.push(ind) }
-      numbers.include?(substraction) && result.push(numbers.index(substraction)) && result.push(numbers.index(element))
+      if numbers.include?(substraction) 
+        result.push(numbers.index(substraction)) 
+        numbers.each_with_index { |num, ind| result.push(numbers.index(ind)) if num == element }
+      end
     end
     result
   end
