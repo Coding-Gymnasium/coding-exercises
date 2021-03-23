@@ -1,6 +1,18 @@
 class DirectionsReduction
   def dirReduc(arr)
-
+    opp = { 'NORTH' => 'SOUTH', 'SOUTH' => 'NORTH', 'WEST' => 'EAST', 'EAST' => 'WEST' }
+    # opp is my dicc of opposites
+    # Iterate over the array and check whether the element value in opp  matches the next element in line. 
+    # if matches delete both elements
+    # if it doesn't match leave as is
+    #arr = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"].
+    #
+    dir = []
+    binding.pry
+    arr.each_with_index do |element, index|
+      #opp[element] == arr[index + 1] && arr.delete_at(index) && arr.delete_at(index + 1)
+    end
+    arr
   end
 end
 
