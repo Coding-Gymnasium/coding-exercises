@@ -1,6 +1,14 @@
 class SumPairs
   def sum_pairs(ints, s)
-    binding.pry
+    pair = []
+    # ints.find { |num| s - num && pair = [num, (s - num)] }
+    ints.each do |n|
+      ints.find do |n1|
+        #binding.pry
+        n + n1 == s && pair = [n1, n]
+      end
+    end
+    pair.empty? ? nil : pair
   end
 end
 

@@ -8,10 +8,21 @@ class DirectionsReduction
     #arr = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"].
     #
     dir = []
-    binding.pry
-    arr.each_with_index do |element, index|
-      #opp[element] == arr[index + 1] && arr.delete_at(index) && arr.delete_at(index + 1)
+    #arr.each_with_index do |element, index|
+    #  binding.pry
+    #  opp[element] == arr[index + 1] && arr.delete_at(index) && arr.delete_at(index + 1)
+    #end
+    #
+    arr.each_with_index do |el, ind|
+      2.times {arr.shift} if arr[ind + 1] == opp[el]
+      arr.each_with_index do |el1, ind1|
+        2.times {arr.shift} if arr[ind1 + 1] == opp[el1]
+      end
     end
+    #arr.each_with_index do |element, index|
+    #  binding.pry
+    #  opp[element] == arr[index + 1] && arr.delete_at(index) && arr.delete_at(index + 1)
+    #end
     arr
   end
 end
