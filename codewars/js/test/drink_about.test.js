@@ -1,4 +1,4 @@
-const subtract = require('../lib/drink_about');
+const peopleWithAgeDrink = require('../lib/drink_about');
 
   test('It receives age, and return what they drink', () => {
     expect(peopleWithAgeDrink(22)).toBe('drink whisky');
@@ -12,4 +12,3 @@ const subtract = require('../lib/drink_about');
     expect(peopleWithAgeDrink(0)).toBe('drink toddy');
   });
 
-// test('subtract 2 - 1 to equal 1', () => {expect(subtract(2, 1)).toBe(1);});
