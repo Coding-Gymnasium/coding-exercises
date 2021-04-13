@@ -1,5 +1,6 @@
 function solution(number) {
-  const num_range = new Array(number -1);
+  const numRange = new Array(number -1);
+  console.log(numRange);
 }
 
 module.exports = solution;
