@@ -2,21 +2,25 @@ class MaxArea
 
   def max_area(height)
     area = 0
-
     height.each_with_index do |h, i|
-      area = unless i == height.length - 1
-               sec_i = i + 1
-               h2 = height[sec_i]
-               mh = h <= h2 ? h : h2
-               distance = sec_i - i
+      break if i == height.length - 1
 
-               h == 1 ? ((height.length - 1) - i) * h : mh * distance
-             end
+      height.each_with_index do |h2, i2|
+        mh = h <= h2 ? h : h2
+        distance = i2 - i
+        if i2 == i then
+          next
+        elsif h == 1 
+          area = (height.length - 1) - i
+        elsif area > mh * distance 
+          area 
+        else
+          area = mh * distance
+        end
+      end
     end
     area
   end
-
-  def calc_area(m_height, distance); end
 end
 # Notes:
 # obtain second index to compare
