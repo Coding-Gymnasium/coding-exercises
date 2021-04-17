@@ -1,6 +1,6 @@
 class WriteUpExpression
   def expression_out(exp)
-    e_dicc = { '+' => 'Plus', '-' =>  'Minus', '*' => 'Times', '/' => 'Divided By', '**' => 'To The Power Of', '=' => 'Equals', '!=' =>  'Does Not Equal' }
+    e_dicc = { '+' => 'Plus', '-' => 'Minus', '*' => 'Times', '/' => 'Divided By', '**' => 'To The Power Of', '=' => 'Equals', '!=' =>  'Does Not Equal' }
     n_dicc = { '1' => 'One', '2' => 'Two', '3' => 'Three', '4' => 'Four', '5' => 'Five', '6' => 'Six', '7' => 'Seven', '8' => 'Eight', '9' => 'Nine', '10' => 'Ten' } 
     arr = exp.split(' ')
     e_dicc.include?(arr[1]) ? "#{n_dicc[arr[0]]} #{e_dicc[arr[1]]} #{n_dicc[arr[2]]}" : "That's not an operator!"
