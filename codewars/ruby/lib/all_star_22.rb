@@ -1,5 +1,8 @@
 class ToTime
   def to_time(seconds)
+    # hours = 
+    # minutes = 
+    "#{hours.to_i} hour(s) and #{minutes.to_i} minute(s)"
   end
 end
 
