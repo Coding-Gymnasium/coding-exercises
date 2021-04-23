@@ -7,9 +7,9 @@ RSpec.describe Abbreviator do
   end
 
   it 'Returns abbreviated string if length >= 4 characters' do
-    # expect(@abb.abbreviate('banana')).to eq('b4a')
+    expect(@abb.abbreviate('banana')).to eq('b4a')
     expect(@abb.abbreviate('double-barrel')).to eq('d4e-b4l')
-    expect(@abb.abbreviate('You, and I, should speak.')).to eq('You, and I, s4d s3k.')
+    # expect(@abb.abbreviate('You, and I, should speak.')).to eq('You, and I, s4d s3k.')
   end
 end
 

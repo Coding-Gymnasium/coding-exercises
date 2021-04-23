@@ -1,13 +1,28 @@
 class Abbreviator
 
   def abbreviate(string)
-    abbr = []
     if string.include?(' ') || string.include?('-')
-      strings = string.split(/[-, ' ']/)
-      strings.map {|string| string.length >= 4 && Array.new([string.slice!(0), string.length - 1, string.slice!(-1)]).join }.join(' ')
+      strings = string.split(/[' ']/)
+      strings.map do |str|
+        if str.length >= 4 && str.include?('-')
+          str.split('-').map { |strg| Array.new([strg.slice!(0), strg.length - 1, strg.slice!(-1)]).join }.join('-')
+        else
+          str.length >= 4 && Array.new([str.slice!(0), str.length - 1, str.slice!(-1)]).join.join(' ')
+        end
+      end
     else
       string.length >= 4 && Array.new([string.slice!(0), string.length - 1, string.slice!(-1)]).join
     end
+
+    # ------------------
+    # ------------------
+    # if string.include?(' ') || string.include?('-')
+    #   strings = string.split(/[-, ' ']/)
+    #   strings.map {|string| string.length >= 4 && Array.new([string.slice!(0), string.length - 1, string.slice!(-1)]).join }.join(' ')
+    # else
+    #   string.length >= 4 && Array.new([string.slice!(0), string.length - 1, string.slice!(-1)]).join
+    # end
+
   end
 end
 
