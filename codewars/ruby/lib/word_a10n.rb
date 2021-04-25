@@ -3,26 +3,20 @@ class Abbreviator
   def abbreviate(string)
     if string.length >= 4 && (string.include?(' ') || string.include?('-'))
       strings = string.split(/[' ']/)
-      strings.map do |str|
+      n_str = strings.map do |str|
         if  str.include?('-')
           str.split('-').map { |strg| Array.new([strg.slice!(0), strg.length - 1, strg.slice!(-1)]).join }.join('-')
         else
-          str.length >= 4 && Array.new([str.slice!(0), str.length - 1, str.slice!(-1)]).join.join(' ')
+          x = str.gsub(/[0-9a-z ]/i, '').prepend('this')
+          y = str.gsub(/[^0-9a-z ]/i, '')
+          z = y.length >= 4 ? Array.new([y.slice!(0), y.length - 1, y.slice!(-1)]).join : y
+          x.sub!('this', z.to_s)
         end
-      end.join
+      end
+      n_str.length > 1 ? n_str.join(' ') : n_str.join
     else
       string.length >= 4 && Array.new([string.slice!(0), string.length - 1, string.slice!(-1)]).join
     end
-
-    # ------------------
-    # ------------------
-    # if string.include?(' ') || string.include?('-')
-    #   strings = string.split(/[-, ' ']/)
-    #   strings.map {|string| string.length >= 4 && Array.new([string.slice!(0), string.length - 1, string.slice!(-1)]).join }.join(' ')
-    # else
-    #   string.length >= 4 && Array.new([string.slice!(0), string.length - 1, string.slice!(-1)]).join
-    # end
-
   end
 end
 
