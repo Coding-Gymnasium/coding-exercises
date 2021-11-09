@@ -1,9 +1,18 @@
 const uniqueInOrder = (iterable) => {
   newArr = [];
+  const arr = iterable.split('');
+
+  arr.map((ch, i) => {
+    while (arr.length != i + 1) {
+      arr[i + 1] === ch && newArr.push(ch) && arr.unshift;
+      break;
+    }
+  });
+
+  console.log(newArr);
 };
 
 module.exports = uniqueInOrder;
-
 /**
  * PSEUDO CODE:
  *
