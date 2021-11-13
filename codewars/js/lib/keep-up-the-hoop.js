@@ -1,5 +1,7 @@
 const hoopCount = (n) => {
-  console.log(n);
+  return n >= 10
+    ? 'Great, now move on to tricks'
+    : 'Keep at it until you get it';
 };
 
 module.exports = hoopCount;
