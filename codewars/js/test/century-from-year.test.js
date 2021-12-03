@@ -6,6 +6,7 @@ describe('Century from a give year', () => {
     expect(century(1900)).toBe(19);
     expect(century(1601)).toBe(17);
     expect(century(2000)).toBe(20);
+    expect(century(201)).toBe(3);
     expect(century(89)).toBe(1);
   });
 });
