@@ -1,15 +1,15 @@
-const uniqueInOrder = (iterable) => {
-  newArr = [];
-  const arr = iterable.split('');
+const uniqueInOrder = iterable => {
+  let newArr = [];
+  let noPunctuation = iterable.replace(/[\p{P}$+<=>^`|~]/gu, '');
+  // let noPunctuation = iterable.replace(/[^\p{L}\p{N}\s]/gu, '');
+  const arr = noPunctuation.split('');
 
-  arr.map((ch, i) => {
-    while (arr.length != i + 1) {
-      arr[i + 1] === ch && newArr.push(ch) && arr.unshift;
-      break;
-    }
-  });
+  newArr.push(arr[0]);
 
-  console.log(newArr);
+  for (let i = 1; i < arr.length; i++) {
+    arr[i] != arr[i - 1] && newArr.push(arr[i]);
+  }
+  return newArr;
 };
 
 module.exports = uniqueInOrder;
