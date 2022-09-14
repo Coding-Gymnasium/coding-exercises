@@ -1,12 +1,13 @@
 const parse = query => {
   // let's get started
+  let parsed = {};
+  if (query === '?') return parsed;
 
   let noQuestionMark = query.slice(1);
 
   let arr = noQuestionMark.split('&').map(el => el.split('='));
   // console.log(arr);
 
-  let parsed = {};
 
   for (let i = 0; i < arr.length; i++) {
     // check there is a value, if not default to true

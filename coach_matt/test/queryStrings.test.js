@@ -29,7 +29,7 @@ describe("happy cases", () => {
   });
 });
 
-describe.skip("corner cases", () => {
+describe("corner cases", () => {
   it("?", () => {
     expect(parse("?")).toEqual({});
   });
