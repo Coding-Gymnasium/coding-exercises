@@ -4,8 +4,9 @@ const parse = query => {
   if (query === '?') return parsed;
 
   let noQuestionMark = query.slice(1);
+  let decoded = decodeURIComponent(noQuestionMark)
 
-  let arr = noQuestionMark.split('&').map(el => el.split('='));
+  let arr = decoded.split('&').map(el => el.split('='));
   // console.log(arr);
 
 

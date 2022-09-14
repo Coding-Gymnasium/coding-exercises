@@ -57,7 +57,7 @@ describe("corner cases", () => {
 });
 
 describe("extra credit", () => {
-  it.skip("?hi%3F=decoded%3F", () => {
+  it("?hi%3F=decoded%3F", () => {
     expect(parse("?hi%3F=decoded%3F")).toEqual({
       "hi?": "decoded?",
     });
