@@ -10,8 +10,25 @@
  * @param {string} name
  * @returns {number} time in minutes
  */
+
 export function timeToMixJuice(name) {
-  throw new Error('Please implement the timeToMixJuice function');
+  switch (name){
+    case 'Pure Strawberry Joy':
+      return 0.5;
+      break;
+    case 'Energizer':
+    case 'Green Garden':
+      return 1.5;
+      break;
+    case 'Tropical Island':
+      return 3;
+      break;
+    case 'All or Nothing':
+      return 5;
+      break;
+    default:
+      return 2.5;
+  }
 }
 
 /**
@@ -23,7 +40,38 @@ export function timeToMixJuice(name) {
  * @returns {number} number of limes cut
  */
 export function limesToCut(wedgesNeeded, limes) {
-  throw new Error('Please implement the limesToCut function');
+  const limesYield = {
+    small: 6,
+    medium: 8,
+    large: 10
+  };
+  let limesCount = 0;
+  let wedges = 0;
+  
+  // for (let i = 0; i < limes.length; i++) {
+  //     while (wedges < wedgesNeeded) {
+  //       limesCount++;
+  //       wedges += limesYield[limes[i]];
+  //       break;
+  //     };
+  // };
+
+  // for (let [i, lime] of limes.entries()) {
+  //   while (wedges < wedgesNeeded) {
+  //     limesCount++;
+  //     wedges += limesYield[limes[i]];
+  //     break;
+  //   };
+
+  for (let lime of limes) {
+    while (wedges < wedgesNeeded) {
+      limesCount++;
+      wedges += limesYield[lime];
+      break;
+    };
+  };
+  
+  return limesCount;
 }
 
 /**
