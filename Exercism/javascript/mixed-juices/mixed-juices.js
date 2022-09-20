@@ -12,20 +12,16 @@
  */
 
 export function timeToMixJuice(name) {
-  switch (name){
-    case 'Pure Strawberry Joy':
+  switch (name) {
+    case "Pure Strawberry Joy":
       return 0.5;
-      break;
-    case 'Energizer':
-    case 'Green Garden':
+    case "Energizer":
+    case "Green Garden":
       return 1.5;
-      break;
-    case 'Tropical Island':
+    case "Tropical Island":
       return 3;
-      break;
-    case 'All or Nothing':
+    case "All or Nothing":
       return 5;
-      break;
     default:
       return 2.5;
   }
@@ -43,11 +39,11 @@ export function limesToCut(wedgesNeeded, limes) {
   const limesYield = {
     small: 6,
     medium: 8,
-    large: 10
+    large: 10,
   };
   let limesCount = 0;
   let wedges = 0;
-  
+
   // for (let i = 0; i < limes.length; i++) {
   //     while (wedges < wedgesNeeded) {
   //       limesCount++;
@@ -68,9 +64,9 @@ export function limesToCut(wedgesNeeded, limes) {
       limesCount++;
       wedges += limesYield[lime];
       break;
-    };
-  };
-  
+    }
+  }
+
   return limesCount;
 }
 
@@ -81,6 +77,26 @@ export function limesToCut(wedgesNeeded, limes) {
  * @param {string[]} orders
  * @returns {string[]} remaining orders after the time is up
  */
+
 export function remainingOrders(timeLeft, orders) {
-  throw new Error('Please implement the remainingOrders function');
+  // 1. copy original array to temporary one to avoid mutating original
+  let ordersMutable = [...orders];
+
+  // 2. Make list of remaining orders
+  // a. obtain time per order and compare to timeLeft
+  // b. remove order if within time until not
+  let ordersTime = 0;
+
+  for (let order of ordersMutable) {
+    console.log(ordersTime, ordersMutable);
+
+    while (ordersTime <= timeLeft) {
+      ordersTime += timeToMixJuice(order);
+      ordersMutable.shift();
+      break;
+    }
+  }
+
+  // 3. return remaining orders array
+  return ordersMutable;
 }
