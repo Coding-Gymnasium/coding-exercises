@@ -79,24 +79,16 @@ export function limesToCut(wedgesNeeded, limes) {
  */
 
 export function remainingOrders(timeLeft, orders) {
-  // 1. copy original array to temporary one to avoid mutating original
   let ordersMutable = [...orders];
 
-  // 2. Make list of remaining orders
-  // a. obtain time per order and compare to timeLeft
-  // b. remove order if within time until not
   let ordersTime = 0;
 
-  for (let order of ordersMutable) {
-    console.log(ordersTime, ordersMutable);
-
-    while (ordersTime <= timeLeft) {
-      ordersTime += timeToMixJuice(order);
+  for (let i = 0; i < orders.length; i++) {
+    if (ordersTime < timeLeft) {
       ordersMutable.shift();
-      break;
+      ordersTime += timeToMixJuice(orders[i]);
     }
-  }
 
-  // 3. return remaining orders array
+  }
   return ordersMutable;
 }

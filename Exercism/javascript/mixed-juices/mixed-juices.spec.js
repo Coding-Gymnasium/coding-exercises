@@ -1,6 +1,6 @@
 import { timeToMixJuice, limesToCut, remainingOrders } from './mixed-juices';
 
-describe.skip('timeToMixJuice', () => {
+describe('timeToMixJuice', () => {
   test("returns the correct time for 'Pure Strawberry Joy'", () => {
     expect(timeToMixJuice('Pure Strawberry Joy')).toBe(0.5);
   });
@@ -20,7 +20,7 @@ describe.skip('timeToMixJuice', () => {
   });
 });
 
-describe.skip('limesToCut', () => {
+describe('limesToCut', () => {
   test('calculates the number of limes needed to reach the target supply', () => {
     const limes = [
       'small',
@@ -61,7 +61,7 @@ describe.skip('limesToCut', () => {
 });
 
 describe('remainingOrders', () => {
-  test.skip('correctly determines the remaining orders', () => {
+  test('correctly determines the remaining orders', () => {
     const orders = [
       'Tropical Island',
       'Energizer',
@@ -91,7 +91,7 @@ describe('remainingOrders', () => {
     expect(remainingOrders(13, orders)).toEqual(expected);
   });
 
-  test.skip('counts all orders as fulfilled if there is enough time', () => {
+  test('counts all orders as fulfilled if there is enough time', () => {
     const orders = [
       'Energizer',
       'Green Garden',
@@ -104,7 +104,7 @@ describe('remainingOrders', () => {
     expect(remainingOrders(12, orders)).toEqual([]);
   });
 
-  test.skip('works if there is only very little time left', () => {
+  test('works if there is only very little time left', () => {
     const orders = ['Bananas Gone Wild', 'Pure Strawberry Joy'];
     const expected = ['Pure Strawberry Joy'];
 
