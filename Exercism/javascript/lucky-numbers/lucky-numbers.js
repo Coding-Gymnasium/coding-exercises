@@ -42,5 +42,13 @@ export function luckyNumber(value) {
  * @returns {string} error message
  */
 export function errorMessage(input) {
-  throw new Error("Implement the errorMessage function");
+  if (!input) return "Required field";
+  input = Number(input);
+  
+  console.log(typeof input, typeof input == 'number', input)
+  if (input != 0 && !isNaN(input) && typeof input === 'number') {
+    return '';
+  } else {
+    return 'Must be a number besides 0';
+  };
 }
