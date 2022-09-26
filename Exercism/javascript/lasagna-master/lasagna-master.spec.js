@@ -28,7 +28,7 @@ describe.skip('cookingStatus', () => {
   });
 });
 
-describe('preparationTime', () => {
+describe.skip('preparationTime', () => {
   test('applies the custom average time per layer', () => {
     const manyLayers = [
       'sauce',
@@ -76,7 +76,7 @@ describe('preparationTime', () => {
   });
 });
 
-describe.skip('quantities', () => {
+describe('quantities', () => {
   test('calculates the amounts of noodles and sauce correctly', () => {
     const fewLayers = ['noodles', 'sauce', 'noodles'];
     expectObjectsToBeEqual(quantities(fewLayers), { noodles: 100, sauce: 0.2 });

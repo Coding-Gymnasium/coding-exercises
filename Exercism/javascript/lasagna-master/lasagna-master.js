@@ -29,3 +29,19 @@ export function cookingStatus(time) {
 export function preparationTime(layers, time = 2) {
   return layers.length * time;
 }
+
+export function quantities(quantArr) {
+  const quantities = {noodles: 0, sauce: 0}
+  if (!quantArr.length) return quantities;
+  for (const item of quantArr) {
+    switch (true) {
+      case item === 'noodles':
+        quantities['noodles'] += 50 
+        break;
+      case item === 'sauce':
+        quantities['sauce'] += 0.2 
+        break;
+    }
+  }
+  return quantities;
+}
