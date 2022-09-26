@@ -8,7 +8,7 @@ import {
 
 const DIFFERENCE_PRECISION_IN_DIGITS = 6;
 
-describe('cookingStatus', () => {
+describe.skip('cookingStatus', () => {
   test('recognizes that there is time left on the timer', () => {
     const expected = 'Not done, please wait.';
     expect(cookingStatus(1)).toBe(expected);
@@ -28,7 +28,7 @@ describe('cookingStatus', () => {
   });
 });
 
-describe.skip('preparationTime', () => {
+describe('preparationTime', () => {
   test('applies the custom average time per layer', () => {
     const manyLayers = [
       'sauce',

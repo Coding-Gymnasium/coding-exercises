@@ -14,14 +14,18 @@
 export function cookingStatus(time) {
   switch (true) {
     case time > 0:
-      return 'Not done, please wait.';
+      return "Not done, please wait.";
       break;
     case time === 0:
-      return 'Lasagna is done.';
+      return "Lasagna is done.";
       break;
 
     default:
-      return time ??= 'You forgot to set the timer.'
+      return (time ??= "You forgot to set the timer.");
       break;
   }
+}
+
+export function preparationTime(layers, time = 2) {
+  return layers.length * time;
 }
