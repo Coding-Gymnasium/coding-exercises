@@ -45,3 +45,11 @@ export function quantities(quantArr) {
   }
   return quantities;
 }
+
+export function addSecretIngredient(friendsList, myList) {
+  console.log('Friends List: ', friendsList)
+  // console.log('My List: ', myList)
+  // console.log(friendsList[friendsList.length - 1])
+  myList.push(friendsList[friendsList.length - 1])
+  
+}
