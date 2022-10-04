@@ -14,8 +14,9 @@
  * @returns {function} a function which takes an x, y parameter, returns the
  *  translated coordinate pair in the form [x, y]
  */
-export function translate2d(dx, dy) {
 
+export function translate2d(dx, dy) {
+  return (x, y) => [x + dx, y + dy];
 }
 
 /**
@@ -28,7 +29,11 @@ export function translate2d(dx, dy) {
  * @returns {function} a function which takes an x, y parameter, returns the
  *  scaled coordinate pair in the form [x, y]
  */
-export function scale2d(sx, sy) {
+
+export function scale2d(sx = 2, sy = 2) {
+  return function (x, y) {
+    return [sx * x, sy * y];
+  };
 }
 
 /**
@@ -41,7 +46,12 @@ export function scale2d(sx, sy) {
  * @returns {function} a function which takes an x, y parameter, returns the
  *  transformed coordinate pair in the form [x, y]
  */
+
 export function composeTransform(f, g) {
+  return function (x, y) {
+    let fResult = f(x, y);
+    return g(fResult[0], fResult[1]);
+  };
 }
 
 /**
@@ -53,5 +63,17 @@ export function composeTransform(f, g) {
  * @returns {function} a function which takes x and y arguments, and will either return the saved result
  *  if the arguments are the same on subsequent calls, or compute a new result if they are different.
  */
+
 export function memoizeTransform(f) {
+  let cache = {};
+  return function (x, y) {
+    console.log(cache);
+    if (x == cache.x && y == cache.y) {
+      return cache.result;
+    } else {
+      [cache.x, cache.y] = [x, y];
+      cache.result = f(x, y);
+      return cache.result;
+    }
+  };
 }

@@ -41,7 +41,7 @@ describe('translate2d', () => {
   });
 });
 
-describe.skip('scale2d', () => {
+describe('scale2d', () => {
   test('should return a function', () => {
     expect(typeof scale2d(0, 0)).toBe('function');
   });
@@ -64,7 +64,7 @@ describe.skip('scale2d', () => {
   });
 });
 
-describe.skip('composeTransform', () => {
+describe('composeTransform', () => {
   const dx = -6;
   const dy = 10;
   const translator = translate2d(dx, dy);
@@ -97,7 +97,7 @@ describe.skip('composeTransform', () => {
   });
 });
 
-describe.skip('memoizeTransform', () => {
+describe('memoizeTransform', () => {
   test('should return a function', () => {
     expect(typeof memoizeTransform(translate2d(0, 0))).toBe('function');
   });
