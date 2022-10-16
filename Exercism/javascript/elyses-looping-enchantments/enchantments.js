@@ -10,9 +10,11 @@
  */
 export function cardTypeCheck(stack, card) {
   let matching_count = 0;
-  for (const element of stack) {
+
+  stack.forEach((element) => {
     if (element === card) matching_count++;
-  }
+  });
+
   return matching_count;
 }
 
