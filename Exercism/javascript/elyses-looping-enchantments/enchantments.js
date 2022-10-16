@@ -13,7 +13,6 @@ export function cardTypeCheck(stack, card) {
   for (const element of stack) {
     if (element === card) matching_count++;
   }
-  // return the count
   return matching_count;
 }
 
@@ -25,5 +24,16 @@ export function cardTypeCheck(stack, card) {
  * @returns {number} number of cards that are either odd or even (depending on `type`)
  */
 export function determineOddEvenCards(stack, type) {
-  throw new Error("Implement the determineOddEvenCards function");
+  let odds = 0;
+  let evens = 0;
+
+  for (const card of stack) {
+    card % 2 === 0 ? evens++ : odds++;
+  }
+
+  if (type) {
+    return evens;
+  } else {
+    return odds;
+  }
 }
