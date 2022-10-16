@@ -29,7 +29,7 @@ describe('cardTypeCheck', () => {
   });
 });
 
-describe('determineOddEvenCards', () => {
+describe.skip('determineOddEvenCards', () => {
   test('a single odd card', () => {
     expect(determineOddEvenCards([1], TYPE_IS_ODD)).toBe(1);
     expect(determineOddEvenCards([1], TYPE_IS_EVEN)).toBe(0);
