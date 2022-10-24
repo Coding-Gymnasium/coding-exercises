@@ -16,7 +16,7 @@ describe('checkHumidityLevel', () => {
   });
 });
 
-describe.skip('reportOverheating', () => {
+describe('reportOverheating', () => {
   test('should not throw if the temperature is 200°C', () => {
     expect(() => reportOverheating(200)).not.toThrow();
   });
