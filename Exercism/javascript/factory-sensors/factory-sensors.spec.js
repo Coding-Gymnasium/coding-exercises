@@ -40,7 +40,7 @@ describe('reportOverheating', () => {
   });
 });
 
-describe.skip('monitorTheMachine', () => {
+describe('monitorTheMachine', () => {
   const actions = {
     check: jest.fn(),
     alertDeadSensor: jest.fn(),
