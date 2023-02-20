@@ -44,7 +44,7 @@ describe('Free service', () => {
   });
 });
 
-describe.skip('Batch service', () => {
+describe('Batch service', () => {
   /** @type {TranslationService} */
   let service;
 

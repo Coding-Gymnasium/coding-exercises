@@ -26,8 +26,9 @@ export class TranslationService {
    * @param {string} text
    * @returns {Promise<string>}
    */
+
   free(text) {
-    console.log(text)
+    return this.api.fetch(text).then(data => data.translation);
   }
 
   /**
@@ -41,7 +42,7 @@ export class TranslationService {
    * @returns {Promise<string[]>}
    */
   batch(texts) {
-    throw new Error('Implement the batch function');
+    throw new Error("Implement the batch function");
   }
 
   /**
@@ -54,7 +55,7 @@ export class TranslationService {
    * @returns {Promise<void>}
    */
   request(text) {
-    throw new Error('Implement the request function');
+    throw new Error("Implement the request function");
   }
 
   /**
@@ -68,7 +69,7 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   premium(text, minimumQuality) {
-    throw new Error('Implement the premium function');
+    throw new Error("Implement the premium function");
   }
 }
 
