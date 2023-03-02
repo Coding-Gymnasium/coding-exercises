@@ -42,7 +42,7 @@ describe('seeingDouble', () => {
   });
 });
 
-describe.skip('threeOfEachThree', () => {
+describe('threeOfEachThree', () => {
   test('one 3 is converted into three 3s', () => {
     expect(threeOfEachThree([3])).toEqual([3, 3, 3]);
   });
