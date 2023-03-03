@@ -44,7 +44,12 @@ export function threeOfEachThree(deck) {
  * @returns {number[]} deck with only two middle cards
  */
 export function middleTwo(deck) {
-  throw new Error("Implement the middleTwo function");
+  return deck.reduce((accumulator, currentValue) => {
+    if (deck.indexOf(currentValue) === 4 || deck.indexOf(currentValue) === 5) {
+      accumulator.push(currentValue);
+    }
+    return accumulator;
+  }, []);
 }
 
 /**

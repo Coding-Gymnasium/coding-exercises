@@ -62,7 +62,7 @@ describe('threeOfEachThree', () => {
   });
 });
 
-describe.skip('middleTwo', () => {
+describe('middleTwo', () => {
   test('extracts the middle two cards', () => {
     const deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const expected = [5, 6];
