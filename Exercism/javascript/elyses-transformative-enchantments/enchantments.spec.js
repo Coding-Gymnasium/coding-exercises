@@ -116,7 +116,7 @@ describe('twoIsSpecial', () => {
   });
 });
 
-describe.skip('perfectlyOrdered', () => {
+describe('perfectlyOrdered', () => {
   test('sorts the cards lowest to highest', () => {
     const deck = [2, 1, 6, 9, 3];
     const expected = [1, 2, 3, 6, 9];
