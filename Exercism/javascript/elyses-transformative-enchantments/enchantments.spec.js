@@ -140,7 +140,7 @@ describe('perfectlyOrdered', () => {
   });
 });
 
-describe.skip('reorder', () => {
+describe('reorder', () => {
   test('reorders the deck', () => {
     const deck = [2, 1, 6, 9, 3];
     const expected = [3, 9, 6, 1, 2];
