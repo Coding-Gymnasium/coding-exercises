@@ -100,7 +100,7 @@ describe('sandwichTrick', () => {
   });
 });
 
-describe.skip('twoIsSpecial', () => {
+describe('twoIsSpecial', () => {
   test('keeps only the 2s', () => {
     const deck = [1, 2, 9, 1, 2, 2, 6, 7];
     const expected = [2, 2, 2];
