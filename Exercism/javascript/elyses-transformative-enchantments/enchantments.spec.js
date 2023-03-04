@@ -76,7 +76,7 @@ describe('middleTwo', () => {
   });
 });
 
-describe.skip('sandwichTrick', () => {
+describe('sandwichTrick', () => {
   test('moves the outside two cards into the middle', () => {
     const deck = [1, 6, 7, 7, 2, 1];
     const expected = [6, 7, 1, 1, 7, 2];

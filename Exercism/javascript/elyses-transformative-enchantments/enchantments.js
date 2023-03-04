@@ -61,7 +61,17 @@ export function middleTwo(deck) {
  */
 
 export function sandwichTrick(deck) {
-  throw new Error("Implement the sandwichTrick function");
+  if (deck.length === 2) return deck.reverse();
+
+  const newArr = [...deck];
+
+  const midCardsArr = [];
+  midCardsArr.push(newArr.pop());
+  midCardsArr.push(newArr.shift());
+
+  const insertionIndex = newArr.length / 2;
+  newArr.splice(insertionIndex, 0, ...midCardsArr);
+  return newArr;
 }
 
 /**
