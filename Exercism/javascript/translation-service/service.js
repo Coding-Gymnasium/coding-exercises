@@ -28,7 +28,7 @@ export class TranslationService {
    */
 
   free(text) {
-    return this.api.fetch(text).then(data => data.translation);
+    return this.api.fetch(text).then((data) => data.translation);
   }
 
   /**
@@ -42,7 +42,8 @@ export class TranslationService {
    * @returns {Promise<string[]>}
    */
   batch(texts) {
-    throw new Error("Implement the batch function");
+    // implement batch function
+    return Promise.all(texts.map((text) => this.free(text)));
   }
 
   /**
