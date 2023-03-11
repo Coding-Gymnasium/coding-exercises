@@ -26,7 +26,7 @@ describe('isValidCommand', () => {
   });
 });
 
-describe.skip('removeEmoji', () => {
+describe('removeEmoji', () => {
   test('removes properly one single emoji encryption', () => {
     const expected = 'What was your name?  Sorry I forgot about it.';
     expect(

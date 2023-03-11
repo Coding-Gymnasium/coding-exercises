@@ -8,7 +8,7 @@
  */
 
 export function isValidCommand(command) {
-  const parsed = command.split(/[,\s]/)
+  const parsed = command.split(/[,\s]/);
   let cb = /chatbot/i;
   return cb.test(parsed[0]);
 }
@@ -20,7 +20,7 @@ export function isValidCommand(command) {
  * @returns {string} The message without the emojis encryption
  */
 export function removeEmoji(message) {
-  throw new Error("Please implement the removeEmoji function");
+  return message.replace(/emoji\d+/gs, "");
 }
 
 /**
