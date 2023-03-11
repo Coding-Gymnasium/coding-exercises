@@ -59,7 +59,7 @@ describe('checkPhoneNumber', () => {
   });
 });
 
-describe.skip('getURL', () => {
+describe('getURL', () => {
   test('returns only the link of the website', () => {
     expect(getURL('You can check more info on youtube.com')).toStrictEqual([
       'youtube.com',
