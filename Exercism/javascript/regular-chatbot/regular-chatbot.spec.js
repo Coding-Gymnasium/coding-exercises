@@ -42,7 +42,7 @@ describe('removeEmoji', () => {
   });
 });
 
-describe.skip('checkPhoneNumber', () => {
+describe('checkPhoneNumber', () => {
   test('recognizes a phone number with the correct format', () => {
     const expected = 'Thanks! You can now download me to your phone.';
     expect(checkPhoneNumber('(+34) 643-876-459')).toBe(expected);

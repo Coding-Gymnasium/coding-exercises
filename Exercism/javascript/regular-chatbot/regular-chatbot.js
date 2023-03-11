@@ -30,7 +30,12 @@ export function removeEmoji(message) {
  * @returns {string} the Chatbot response to the phone Validation
  */
 export function checkPhoneNumber(number) {
-  throw new Error("Please implement the checkPhoneNumber function");
+  let telRegEx =
+    /^[(]?[\+]?[0-9]{2}[)]?[' '\s\.]?[0-9]{3}[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{3}$/im;
+
+  return telRegEx.test(number)
+    ? "Thanks! You can now download me to your phone."
+    : `Oops, it seems like I can't reach out to ${number}`;
 }
 
 /**
