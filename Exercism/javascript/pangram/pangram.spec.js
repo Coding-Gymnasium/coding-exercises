@@ -33,7 +33,7 @@ describe('Pangram()', () => {
     );
   });
 
-  xtest('missing letters replaced by numbers', () => {
+  test('missing letters replaced by numbers', () => {
     expect(isPangram('7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog')).toBe(
       false
     );
@@ -43,7 +43,7 @@ describe('Pangram()', () => {
     expect(isPangram('"Five quacking Zephyrs jolt my wax bed."')).toBe(true);
   });
 
-  xtest('case insensitive', () => {
+  test('case insensitive', () => {
     expect(isPangram('the quick brown fox jumps over with lazy FX')).toBe(
       false
     );

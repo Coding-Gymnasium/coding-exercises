@@ -4,17 +4,19 @@
 //
 
 export const isPangram = (str) => {
+  // make lower case
+  const strLow = str.toLowerCase();
+  // remove numbers
+  const noNumbers = strLow.replace(/\d+/g, "");
+  // remove underscores
+  const noSymbolsOrPunctuation = noNumbers.replace(
+    /[.,\/#!$%'"\^&\*;:{}=\s\-_`~()]/g, "");
   // remove spaces
-  const noSpaces = str.replace(/\s/g, "");
-  // const trimmedString = str.replaceAll(/\s[a-z]/g, "");
+  const noSpaces = noSymbolsOrPunctuation.replace(/\s/g, "");
 
   // Make array with just one instance of each character
   const strArr = noSpaces.split("");
   const uniqueChar = Array.from(new Set(strArr));
 
-  // check for empty string
-  // check for perfect lower case
-  // check for missing letters
-
-  return str.length > 0 && str === str.toLowerCase() && uniqueChar.length === 26;
+  return str.length > 0 && uniqueChar.length === 26;
 };
