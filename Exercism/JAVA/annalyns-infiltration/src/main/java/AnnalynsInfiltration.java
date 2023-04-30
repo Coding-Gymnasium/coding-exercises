@@ -27,7 +27,21 @@ class AnnalynsInfiltration {
                                         boolean archerIsAwake,
                                         boolean prisonerIsAwake,
                                         boolean petDogIsPresent) {
-    throw new UnsupportedOperationException(
-        "Please implement the (static) AnnalynsInfiltration.canFreePrisoner() method");
+    /**
+     * Annalyn can try sneaking into the camp to free the prisoner. This is a
+     * risky thing to do and can only succeed in one of two ways:
+     * 1. If Annalyn has her pet dog with her she can rescue the prisoner if the
+     *archer is asleep. The knight is scared of the dog and the archer will not
+     *have time to get ready before Annalyn and the prisoner can escape.
+     * 2. If Annalyn does not have her dog then she and the prisoner must be
+     *very sneaky! Annalyn can free the prisoner if the prisoner is awake and
+     *the knight and archer are both sleeping, but if the prisoner is sleeping
+     *they can't be rescued: the prisoner would be startled by Annalyn's sudden
+     *appearance and wake up the knight and archer.
+     **/
+
+    return (petDogIsPresent && !archerIsAwake) ||
+        (!petDogIsPresent && prisonerIsAwake && !knightIsAwake &&
+         !archerIsAwake);
   }
 }
