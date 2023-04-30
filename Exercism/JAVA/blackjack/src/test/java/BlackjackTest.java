@@ -79,62 +79,51 @@ public class BlackjackTest {
         assertThat(blackjack.parseCard("king")).isEqualTo(10);
     }
    
-    @Ignore
     @Test
     public void blackjackWithTenAceSecond() {
         assertThat(blackjack.isBlackjack("ten", "ace")).isEqualTo(true);
     }
    
-    @Ignore
     @Test
     public void blackjackWithJackAceSecond() {
         assertThat(blackjack.isBlackjack("jack", "ace")).isEqualTo(true);
     }
    
-    @Ignore
     @Test
     public void blackjackWithQueenAceSecond() {
         assertThat(blackjack.isBlackjack("queen", "ace")).isEqualTo(true);
     }
    
-    @Ignore
     @Test
     public void blackjackWithKingAceSecond() {
         assertThat(blackjack.isBlackjack("king", "ace")).isEqualTo(true);
     }   
     
-   
-    @Ignore
     @Test
     public void noBlackjackWithFive() {
         assertThat(blackjack.isBlackjack("ace", "five")).isEqualTo(false);
     }
    
-    @Ignore
     @Test
     public void noBlackjackWithNine() {
         assertThat(blackjack.isBlackjack("ace", "nine")).isEqualTo(false);
     }
    
-    @Ignore
     @Test
     public void noBlackjackWithTwoAces() {
         assertThat(blackjack.isBlackjack("ace", "ace")).isEqualTo(false);
     }
    
-    @Ignore
     @Test
     public void noBlackjackWithTwoFigures() {
         assertThat(blackjack.isBlackjack("queen", "jack")).isEqualTo(false);
     }
    
-    @Ignore
     @Test
     public void noBlackjackWithKingAndFive() {
         assertThat(blackjack.isBlackjack("king", "five")).isEqualTo(false);
     }
    
-    @Ignore
     @Test
     public void noBlackjackWithEightAndFive() {
         assertThat(blackjack.isBlackjack("eight", "five")).isEqualTo(false);

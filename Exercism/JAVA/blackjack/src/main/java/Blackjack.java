@@ -24,8 +24,8 @@ public class Blackjack {
   }
 
   public boolean isBlackjack(String card1, String card2) {
-    throw new UnsupportedOperationException(
-        "Please implement the Blackjack.isBlackjack method");
+    //  Blackjack (two cards that sum up to a value of 21)
+    return parseCard(card1) + parseCard(card2) == 21;
   }
 
   public String largeHand(boolean isBlackjack, int dealerScore) {
