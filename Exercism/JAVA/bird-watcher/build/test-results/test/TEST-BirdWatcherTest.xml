@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BirdWatcherTest" tests="9" skipped="8" failures="0" errors="0" timestamp="2023-05-01T00:24:54" hostname="Nico-M1-Max.local" time="0.02">
+  <properties/>
+  <testcase name="itShouldNotHaveBusyDays" classname="BirdWatcherTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="itShouldNotHaveDaysWithoutBirds" classname="BirdWatcherTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="itTestGetLastWeek" classname="BirdWatcherTest" time="0.02"/>
+  <testcase name="itHasDayWithoutBirds" classname="BirdWatcherTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="itTestGetCountForBusyDays" classname="BirdWatcherTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="itTestGetCountForFirstDays" classname="BirdWatcherTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="itTestGetToday" classname="BirdWatcherTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="itIncrementTodaysCount" classname="BirdWatcherTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="itTestGetCountForMoreDaysThanTheArraySize" classname="BirdWatcherTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
