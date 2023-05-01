@@ -63,7 +63,6 @@ public class BirdWatcherTest {
             .isEqualTo(DAY1 + DAY2 + DAY3 + DAY4 + DAY5 + DAY6 + TODAY);
     }
 
-    @Ignore
     @Test
     public void itTestGetCountForBusyDays() {
         // DAY3, DAY5 and DAY6 are all >= 5 birds
