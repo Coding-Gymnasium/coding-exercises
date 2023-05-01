@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BirdWatcherTest" tests="9" skipped="5" failures="0" errors="0" timestamp="2023-05-01T00:50:54" hostname="Nico-M1-Max.local" time="0.028">
+<testsuite name="BirdWatcherTest" tests="9" skipped="3" failures="0" errors="0" timestamp="2023-05-01T01:02:06" hostname="Nico-M1-Max.local" time="0.021">
   <properties/>
   <testcase name="itShouldNotHaveBusyDays" classname="BirdWatcherTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="itShouldNotHaveDaysWithoutBirds" classname="BirdWatcherTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="itTestGetLastWeek" classname="BirdWatcherTest" time="0.026"/>
-  <testcase name="itHasDayWithoutBirds" classname="BirdWatcherTest" time="0.0"/>
+  <testcase name="itShouldNotHaveDaysWithoutBirds" classname="BirdWatcherTest" time="0.017"/>
+  <testcase name="itTestGetLastWeek" classname="BirdWatcherTest" time="0.002"/>
+  <testcase name="itHasDayWithoutBirds" classname="BirdWatcherTest" time="0.001"/>
   <testcase name="itTestGetCountForBusyDays" classname="BirdWatcherTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="itTestGetCountForFirstDays" classname="BirdWatcherTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="itTestGetToday" classname="BirdWatcherTest" time="0.001"/>
+  <testcase name="itTestGetCountForFirstDays" classname="BirdWatcherTest" time="0.001"/>
+  <testcase name="itTestGetToday" classname="BirdWatcherTest" time="0.0"/>
   <testcase name="itIncrementTodaysCount" classname="BirdWatcherTest" time="0.0"/>
   <testcase name="itTestGetCountForMoreDaysThanTheArraySize" classname="BirdWatcherTest" time="0.0">
     <skipped/>

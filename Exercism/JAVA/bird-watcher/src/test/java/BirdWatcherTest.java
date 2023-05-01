@@ -45,14 +45,12 @@ public class BirdWatcherTest {
         assertThat(birdWatcher.hasDayWithoutBirds()).isTrue();
     }
     
-    @Ignore
     @Test
     public void itShouldNotHaveDaysWithoutBirds() {
         birdWatcher = new BirdWatcher(new int[]{1, 2, 5, 3, 7, 8, 4});
         assertThat(birdWatcher.hasDayWithoutBirds()).isFalse();
     }
 
-    @Ignore
     @Test
     public void itTestGetCountForFirstDays() {
         assertThat(birdWatcher.getCountForFirstDays(4)).isEqualTo(DAY1 + DAY2 + DAY3 + DAY4);
