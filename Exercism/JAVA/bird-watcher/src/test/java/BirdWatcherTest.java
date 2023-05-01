@@ -34,7 +34,6 @@ public class BirdWatcherTest {
         assertThat(birdWatcher.getToday()).isEqualTo(TODAY);
     }
     
-    @Ignore
     @Test
     public void itIncrementTodaysCount() {
         birdWatcher.incrementTodaysCount();

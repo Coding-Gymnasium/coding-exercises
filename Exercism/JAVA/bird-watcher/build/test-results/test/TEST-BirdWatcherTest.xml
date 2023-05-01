@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BirdWatcherTest" tests="9" skipped="7" failures="0" errors="0" timestamp="2023-05-01T00:30:07" hostname="Nico-M1-Max.local" time="0.021">
+<testsuite name="BirdWatcherTest" tests="9" skipped="6" failures="0" errors="0" timestamp="2023-05-01T00:35:17" hostname="Nico-M1-Max.local" time="0.021">
   <properties/>
   <testcase name="itShouldNotHaveBusyDays" classname="BirdWatcherTest" time="0.0">
     <skipped/>
@@ -17,10 +17,8 @@
   <testcase name="itTestGetCountForFirstDays" classname="BirdWatcherTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="itTestGetToday" classname="BirdWatcherTest" time="0.002"/>
-  <testcase name="itIncrementTodaysCount" classname="BirdWatcherTest" time="0.0">
-    <skipped/>
-  </testcase>
+  <testcase name="itTestGetToday" classname="BirdWatcherTest" time="0.001"/>
+  <testcase name="itIncrementTodaysCount" classname="BirdWatcherTest" time="0.0"/>
   <testcase name="itTestGetCountForMoreDaysThanTheArraySize" classname="BirdWatcherTest" time="0.0">
     <skipped/>
   </testcase>
