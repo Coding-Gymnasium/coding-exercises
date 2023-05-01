@@ -40,7 +40,6 @@ public class BirdWatcherTest {
         assertThat(birdWatcher.getToday()).isEqualTo(TODAY + 1);
     }
     
-    @Ignore
     @Test
     public void itHasDayWithoutBirds() {
         assertThat(birdWatcher.hasDayWithoutBirds()).isTrue();
