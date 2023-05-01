@@ -29,7 +29,6 @@ public class BirdWatcherTest {
             .containsExactly(DAY1, DAY2, DAY3, DAY4, DAY5, DAY6, TODAY);
     }
     
-    @Ignore
     @Test
     public void itTestGetToday() {
         assertThat(birdWatcher.getToday()).isEqualTo(TODAY);
