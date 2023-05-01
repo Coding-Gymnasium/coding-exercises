@@ -56,7 +56,6 @@ public class BirdWatcherTest {
         assertThat(birdWatcher.getCountForFirstDays(4)).isEqualTo(DAY1 + DAY2 + DAY3 + DAY4);
     }
   
-    @Ignore
     @Test
     public void itTestGetCountForMoreDaysThanTheArraySize() {
         assertThat(birdWatcher.getCountForFirstDays(10))
@@ -69,7 +68,6 @@ public class BirdWatcherTest {
         assertThat(birdWatcher.getBusyDays()).isEqualTo(3);
     }
     
-    @Ignore
     @Test
     public void itShouldNotHaveBusyDays() {
         birdWatcher = new BirdWatcher(new int[]{1, 2, 3, 3, 2, 1, 4});
