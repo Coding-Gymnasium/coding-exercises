@@ -1,12 +1,13 @@
 public class LogLevels {
     
     public static String message(String logLine) {
-      String[] message = logLine.split(":");
-      return message[message.length - 1].trim();
+      String[] splitLogLine = logLine.split(":");
+      return splitLogLine[splitLogLine.length - 1].trim();
     }
 
     public static String logLevel(String logLine) {
-        throw new UnsupportedOperationException("Please implement the (static) LogLine.logLevel() method");
+        String logLevel = logLine.split(":")[0].toLowerCase();
+        return logLevel.replace("[", "").replace("]", "");
     }
 
     public static String reformat(String logLine) {
