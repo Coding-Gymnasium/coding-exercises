@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LanguageListTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2023-05-22T02:19:36" hostname="Nico-M1-Max.local" time="0.019">
+<testsuite name="LanguageListTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2023-05-24T02:41:16" hostname="Nico-M1-Max.local" time="0.022">
   <properties/>
-  <testcase name="addMultipleLanguages" classname="LanguageListTest" time="0.016"/>
-  <testcase name="countEmpty" classname="LanguageListTest" time="0.002"/>
+  <testcase name="addMultipleLanguages" classname="LanguageListTest" time="0.019"/>
+  <testcase name="countEmpty" classname="LanguageListTest" time="0.001"/>
   <testcase name="countThree" classname="LanguageListTest" time="0.0"/>
   <testcase name="excitingLanguageListWithKotlin" classname="LanguageListTest" time="0.0"/>
   <testcase name="addOneLanguage" classname="LanguageListTest" time="0.0"/>
