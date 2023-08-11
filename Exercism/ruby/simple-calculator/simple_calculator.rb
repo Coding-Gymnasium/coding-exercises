@@ -7,7 +7,7 @@ class SimpleCalculator
   def self.calculate(first_operand, second_operand, operation)
     case second_operand
     when 0
-      return 'Division by zero is not allowed.'
+      'Division by zero is not allowed.'
     else
       result = first_operand.public_send operation, second_operand
       "#{first_operand} #{operation} #{second_operand} = #{result}"
