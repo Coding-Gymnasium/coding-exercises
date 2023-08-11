@@ -20,17 +20,14 @@ class SimpleCalculatorTest < Minitest::Test
   end
 
   def test_no_number_first_operand_raises_exception
-    skip
     assert_raises(ArgumentError) { SimpleCalculator.calculate('1', 2, '+') }
   end
 
   def test_no_number_second_operand_raises_exception
-    skip
     assert_raises(ArgumentError) { SimpleCalculator.calculate(1, '2', '+') }
   end
 
   def test_raises_exception_for_non_valid_operations
-    skip
     assert_raises(SimpleCalculator::UnsupportedOperation) { SimpleCalculator.calculate(1, 2, '**') }
   end
 
