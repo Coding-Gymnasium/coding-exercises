@@ -25,7 +25,6 @@ public class SqueakyCleanTest {
         assertThat(SqueakyClean.clean("my   Id")).isEqualTo("my___Id");
     }
     
-    @Ignore
     @Test
     public void leading_and_trailing_spaces() {
         assertThat(SqueakyClean.clean(" myId ")).isEqualTo("_myId_");
@@ -55,7 +54,6 @@ public class SqueakyCleanTest {
         assertThat(SqueakyClean.clean("à-ḃç")).isEqualTo("àḂç");
     }
     
-    @Ignore
     @Test
     public void kebab_to_camel_case_no_letter() {
         assertThat(SqueakyClean.clean("a-1C")).isEqualTo("aC");
