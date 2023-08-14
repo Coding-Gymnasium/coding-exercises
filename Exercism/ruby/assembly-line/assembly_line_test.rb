@@ -43,27 +43,22 @@ class AssemblyLineTest < Minitest::Test
   end
 
   def test_working_items_per_minute_for_speed_one
-    skip
     assert_equal 3, AssemblyLine.new(1).working_items_per_minute
   end
 
   def test_working_items_per_minute_for_speed_five
-    skip
     assert_equal 16, AssemblyLine.new(5).working_items_per_minute
   end
 
   def test_working_items_per_minute_for_speed_eight
-    skip
     assert_equal 26, AssemblyLine.new(8).working_items_per_minute
   end
 
   def test_working_items_per_minute_for_speed_nine
-    skip
     assert_equal 26, AssemblyLine.new(9).working_items_per_minute
   end
 
   def test_working_items_per_minute_for_speed_ten
-    skip
     assert_equal 28, AssemblyLine.new(10).working_items_per_minute
   end
 end

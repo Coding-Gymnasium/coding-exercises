@@ -17,6 +17,7 @@ class AssemblyLine
   end
 
   def working_items_per_minute
-    raise 'Please implement the AssemblyLine#working_items_per_minute method'
+    cars_per_hour = production_rate_per_hour
+    (cars_per_hour / 60).to_i
   end
 end
