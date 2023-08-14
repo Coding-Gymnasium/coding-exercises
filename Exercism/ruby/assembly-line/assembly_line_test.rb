@@ -7,47 +7,38 @@ class AssemblyLineTest < Minitest::Test
   end
 
   def test_production_rate_per_hour_for_speed_two
-    skip
     assert_in_delta 442.0, AssemblyLine.new(2).production_rate_per_hour, 0.0001
   end
 
   def test_production_rate_per_hour_for_speed_three
-    skip
     assert_in_delta 663.0, AssemblyLine.new(3).production_rate_per_hour, 0.0001
   end
 
   def test_production_rate_per_hour_for_speed_four
-    skip
     assert_in_delta 884.0, AssemblyLine.new(4).production_rate_per_hour, 0.0001
   end
 
   def test_production_rate_per_hour_for_speed_five
-    skip
     assert_in_delta 994.5, AssemblyLine.new(5).production_rate_per_hour, 0.0001
   end
 
   def test_production_rate_per_hour_for_speed_six
-    skip
     assert_in_delta 1193.4, AssemblyLine.new(6).production_rate_per_hour, 0.0001
   end
 
   def test_production_rate_per_hour_for_speed_seven
-    skip
     assert_in_delta 1392.3, AssemblyLine.new(7).production_rate_per_hour, 0.0001
   end
 
   def test_production_rate_per_hour_for_speed_eight
-    skip
     assert_in_delta 1591.2, AssemblyLine.new(8).production_rate_per_hour, 0.0001
   end
 
   def test_production_rate_per_hour_for_speed_nine
-    skip
     assert_in_delta 1591.2, AssemblyLine.new(9).production_rate_per_hour, 0.0001
   end
 
   def test_production_rate_per_hour_for_speed_ten
-    skip
     assert_in_delta 1701.7, AssemblyLine.new(10).production_rate_per_hour, 0.0001
   end
 
