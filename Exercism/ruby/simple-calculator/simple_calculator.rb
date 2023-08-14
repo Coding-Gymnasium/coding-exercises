@@ -19,6 +19,6 @@ class SimpleCalculator
 
     end
   end
-end
 
-class CustomError < StandardError; end
+  class UnsupportedOperation < StandardError; end
+end
