@@ -19,22 +19,18 @@ class MoviegoerTest < Minitest::Test
   end
 
   def test_get_terminal_for_oil
-    skip
     assert_equal :A, Port.get_terminal(:OIL123)
   end
 
   def test_get_terminal_for_gas
-    skip
     assert_equal :A, Port.get_terminal(:GAS674)
   end
 
   def test_get_terminal_for_cars
-    skip
     assert_equal :B, Port.get_terminal(:CAR942)
   end
 
   def test_get_terminal_for_clothes
-    skip
     assert_equal :B, Port.get_terminal(:CLO315)
   end
 end

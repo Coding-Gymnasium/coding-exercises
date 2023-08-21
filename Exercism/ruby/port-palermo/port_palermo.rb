@@ -10,7 +10,12 @@ module Port
     truncated_name.to_sym
   end
 
-  def self.get_terminal(_ship_identifier)
-    raise 'Please implement the Port.get_terminal method'
+  def self.get_terminal(ship_identifier)
+    truncated = ship_identifier.to_s.slice(0..2)
+    if %w[OIL GAS].include?(truncated)
+      :A
+    else
+      :B
+    end
   end
 end
