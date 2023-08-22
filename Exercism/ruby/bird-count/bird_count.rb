@@ -15,14 +15,14 @@ class BirdCount
   end
 
   def total
-    raise 'Please implement the BirdCount#total method'
+    @this_week.sum
   end
 
   def busy_days
-    raise 'Please implement the BirdCount#busy_days method'
+    @this_week.count { |day| day >= 5 }
   end
 
   def day_without_birds?
-    raise 'Please implement the BirdCount#day_without_birds method'
+    @this_week.any?(&:zero?)
   end
 end
