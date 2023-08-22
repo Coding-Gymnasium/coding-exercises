@@ -7,11 +7,11 @@ class BirdCount
   end
 
   def initialize(birds_per_day)
-    raise 'Please implement the BirdCount#initialize method'
+    @this_week = birds_per_day
   end
 
   def yesterday
-    raise 'Please implement the BirdCount#yesterday method'
+    @this_week[-2]
   end
 
   def total
