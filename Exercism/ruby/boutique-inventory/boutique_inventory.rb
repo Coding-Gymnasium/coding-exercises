@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# BoutiqueInventory class
 class BoutiqueInventory
   def initialize(items)
     @items = items
@@ -12,11 +15,12 @@ class BoutiqueInventory
   end
 
   def out_of_stock
-    raise 'Implement the BoutiqueInventory#out_of_stock method'
+    @items.select { |item| item[:quantity_by_size].empty? }
   end
 
-  def stock_for_item(_name)
-    raise 'Implement the BoutiqueInventory#stock_for_item method'
+  def stock_for_item(name)
+    item_stock = @items.find { |item| item[:name] == name }
+    item_stock[:quantity_by_size]
   end
 
   def total_stock
