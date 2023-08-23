@@ -26,12 +26,10 @@ class BoutiqueInventoryTest < Minitest::Test
   end
 
   def test_cheap_for_no_items
-    skip
     assert_empty BoutiqueInventory.new([]).cheap
   end
 
   def test_cheap_for_no_cheap_items
-    skip
     shoes = { price: 30.00, name: 'Shoes', quantity_by_size: {} }
     coat = { price: 65.00, name: 'Coat', quantity_by_size: {} }
     items = [shoes, coat]
@@ -39,7 +37,6 @@ class BoutiqueInventoryTest < Minitest::Test
   end
 
   def test_one_cheap_item
-    skip
     shoes = { price: 30.00, name: 'Shoes', quantity_by_size: {} }
     coat = { price: 65.00, name: 'Coat', quantity_by_size: {} }
     handkerchief = { price: 19.99, name: 'Handkerchief', quantity_by_size: {} }
@@ -48,7 +45,6 @@ class BoutiqueInventoryTest < Minitest::Test
   end
 
   def test_two_cheap_item
-    skip
     shoes = { price: 30.00, name: 'Shoes', quantity_by_size: {} }
     coat = { price: 65.00, name: 'Coat', quantity_by_size: {} }
     handkerchief = { price: 19.99, name: 'Handkerchief', quantity_by_size: {} }

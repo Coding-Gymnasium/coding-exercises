@@ -8,7 +8,7 @@ class BoutiqueInventory
   end
 
   def cheap
-    raise 'Implement the BoutiqueInventory#cheap method'
+    @items.select { |item| item[:price] < 30 }
   end
 
   def out_of_stock
