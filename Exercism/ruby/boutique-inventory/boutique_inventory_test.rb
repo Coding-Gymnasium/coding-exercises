@@ -96,12 +96,10 @@ class BoutiqueInventoryTest < Minitest::Test
   end
 
   def test_total_stock_for_no_items
-    skip
     assert_equal 0, BoutiqueInventory.new([]).total_stock
   end
 
   def test_total_stock_for_no_stock
-    skip
     shoes = { price: 30.00, name: 'Shoes', quantity_by_size: {} }
     coat = { price: 65.00, name: 'Coat', quantity_by_size: {} }
     items = [shoes, coat]
@@ -109,7 +107,6 @@ class BoutiqueInventoryTest < Minitest::Test
   end
 
   def test_total_stock_for_some_items
-    skip
     shoes = { price: 30.00, name: 'Shoes', quantity_by_size: { s: 1, xl: 4 } }
     coat = { price: 65.00, name: 'Coat', quantity_by_size: {} }
     handkerchief = { price: 19.99, name: 'Handkerchief', quantity_by_size: {} }

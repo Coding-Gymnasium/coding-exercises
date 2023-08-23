@@ -24,7 +24,11 @@ class BoutiqueInventory
   end
 
   def total_stock
-    raise 'Implement the BoutiqueInventory#total_stock method'
+    totals_array = []
+    @items.each do |item|
+      totals_array << item[:quantity_by_size].sum { |_key, value| value }
+    end
+    totals_array.sum
   end
 
   private
