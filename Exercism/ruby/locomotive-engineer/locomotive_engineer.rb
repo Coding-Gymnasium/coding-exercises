@@ -1,10 +1,14 @@
+# frozen_string_literal: true
+
+# LocomotiveEngineer class
 class LocomotiveEngineer
   def self.generate_list_of_wagons(*wagons)
     wagons
   end
 
-  def self.fix_list_of_wagons(_each_wagons_id, _missing_wagons)
-    raise 'Please implement the LocomotiveEngineer.fix_list_of_wagons method'
+  def self.fix_list_of_wagons(each_wagons_id, missing_wagons)
+    first, second, third, *rest_of_first = each_wagons_id
+    [third, *missing_wagons, *rest_of_first, first, second]
   end
 
   def self.add_missing_stops

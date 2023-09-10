@@ -20,26 +20,22 @@ class LocomotiveEngineerTest < Minitest::Test
   end
 
   def test_fix_array_of_wagons_a_few_inputs
-    skip
     assert_equal [1, 3, 17, 6, 15, 7, 4, 12, 6, 3, 13, 2, 5],
                  LocomotiveEngineer.fix_list_of_wagons([2, 5, 1, 7, 4, 12, 6, 3, 13], [3, 17, 6, 15])
   end
 
   def test_fix_array_of_wagons_many_inputs
-    skip
     assert_equal [1, 8, 10, 5, 9, 36, 7, 20, 14, 10, 4, 12, 6, 23, 17, 13, 22, 28, 19, 3, 27],
                  LocomotiveEngineer.fix_list_of_wagons([3, 27, 1, 14, 10, 4, 12, 6, 23, 17, 13, 22, 28, 19],
                                                        [8, 10, 5, 9, 36, 7, 20])
   end
 
   def test_fix_array_of_wagons_the_inputs_are_same_length
-    skip
     assert_equal [1, 8, 6, 15, 4, 2],
                  LocomotiveEngineer.fix_list_of_wagons([4, 2, 1], [8, 6, 15])
   end
 
   def test_fix_array_of_wagons_the_missing_wagons_input_is_longer
-    skip
     assert_equal [1, 8, 6, 4, 5, 9, 21, 2, 13, 25, 7, 19, 10, 3, 14],
                  LocomotiveEngineer.fix_list_of_wagons([3, 14, 1, 25, 7, 19, 10], [8, 6, 4, 5, 9, 21, 2, 13])
   end
