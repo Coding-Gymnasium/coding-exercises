@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require_relative 'sum_of_multiples'
 
+# SumOfMultiplesTest class
 class SumOfMultiplesTest < Minitest::Test
   def test_no_multiples_within_limit
     # skip
@@ -21,19 +22,19 @@ class SumOfMultiplesTest < Minitest::Test
   end
 
   def test_more_than_one_factor_with_multiples_within_limit
-    skip
+    # skip
     sum_of_multiples = SumOfMultiples.new(3, 5)
     assert_equal 23, sum_of_multiples.to(10)
   end
 
   def test_each_multiple_is_only_counted_once
-    skip
+    # skip
     sum_of_multiples = SumOfMultiples.new(3, 5)
     assert_equal 2_318, sum_of_multiples.to(100)
   end
 
   def test_a_much_larger_limit
-    skip
+    # skip
     sum_of_multiples = SumOfMultiples.new(3, 5)
     assert_equal 233_168, sum_of_multiples.to(1_000)
   end

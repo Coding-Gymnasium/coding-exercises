@@ -17,11 +17,13 @@ class SumOfMultiples
     @magical.each do |num|
       @multiples.push(*find_multiples(num, base_num))
     end
-    @multiples.reduce(0) { |sum, num| sum + num }
+
+    uniq_arr = @multiples.uniq
+    uniq_arr.reduce(0) { |sum, num| sum + num }
   end
 
   def find_multiples(num, base_num)
-    num_arr = (1..base_num).to_a
+    num_arr = (1...base_num).to_a
     num_arr.find_all { |n| (n % num).zero? }
   end
 end
