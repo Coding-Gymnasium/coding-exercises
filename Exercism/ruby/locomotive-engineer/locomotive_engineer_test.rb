@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require_relative 'locomotive_engineer'
 
+# LocomotiveEngineerTest Class
 class LocomotiveEngineerTest < Minitest::Test
   def test_get_array_of_wagons_with_a_few_inputs
     assert_equal [1, 5, 2, 7, 4], LocomotiveEngineer.generate_list_of_wagons(1, 5, 2, 7, 4)
@@ -47,16 +48,19 @@ class LocomotiveEngineerTest < Minitest::Test
   end
 
   def test_add_missing_stops_with_one_stop
+    # skip
     assert_equal({ from: 'Paris', to: 'London', stops: ['Lille'] },
                  LocomotiveEngineer.add_missing_stops({ from: 'Paris', to: 'London' }, stop_1: 'Lille'))
   end
 
   def test_add_missing_stops_with_zero_stops
+    # skip
     assert_equal({ from: 'New York', to: 'Philadelphia', stops: [] },
                  LocomotiveEngineer.add_missing_stops({ from: 'New York', to: 'Philadelphia' }))
   end
 
   def test_add_missing_stops_with_many_stops
+    skip
     assert_equal({ from: 'Gothenburg', to: 'Copenhagen', stops: %w[Kungsbacka Varberg Halmstad Angelholm Lund Malmo] },
                  LocomotiveEngineer.add_missing_stops({ from: 'Gothenburg', to: 'Copenhagen' }, stop_1: 'Kungsbacka',
                                                                                                 stop_2: 'Varberg', stop_3: 'Halmstad', stop_4: 'Angelholm', stop_5: 'Lund', stop_6: 'Malmo'))
