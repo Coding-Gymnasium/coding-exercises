@@ -11,11 +11,14 @@ class LocomotiveEngineer
     [third, *missing_wagons, *rest_of_first, first, second]
   end
 
-  # def self.add_missing_stops(route, stops)
   def self.add_missing_stops(*route_stops)
-    p route_stops.to_a
-    # stops_arr = stops.map { |_k, v| v }
-    # { **route, stops: stops_arr }
+    route, stops = route_stops
+    if stops.nil?
+      { **route, stops: [] }
+    else
+      stops_arr = stops.values
+      { **route, stops: stops_arr }
+    end
   end
 
   def self.extend_route_information(_route, _more_route_information)

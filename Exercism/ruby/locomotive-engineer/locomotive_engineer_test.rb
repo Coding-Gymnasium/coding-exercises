@@ -60,7 +60,7 @@ class LocomotiveEngineerTest < Minitest::Test
   end
 
   def test_add_missing_stops_with_many_stops
-    skip
+    # skip
     assert_equal({ from: 'Gothenburg', to: 'Copenhagen', stops: %w[Kungsbacka Varberg Halmstad Angelholm Lund Malmo] },
                  LocomotiveEngineer.add_missing_stops({ from: 'Gothenburg', to: 'Copenhagen' }, stop_1: 'Kungsbacka',
                                                                                                 stop_2: 'Varberg', stop_3: 'Halmstad', stop_4: 'Angelholm', stop_5: 'Lund', stop_6: 'Malmo'))
