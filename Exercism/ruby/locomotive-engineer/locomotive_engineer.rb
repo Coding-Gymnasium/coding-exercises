@@ -21,7 +21,7 @@ class LocomotiveEngineer
     end
   end
 
-  def self.extend_route_information(_route, _more_route_information)
-    raise 'Please implement the LocomotiveEngineer.extend_route_information method'
+  def self.extend_route_information(route, more_route_information)
+    { **route, **more_route_information }
   end
 end

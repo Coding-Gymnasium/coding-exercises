@@ -67,7 +67,7 @@ class LocomotiveEngineerTest < Minitest::Test
   end
 
   def test_extend_route_information_with_four_extra_inputs
-    skip
+    # skip
     assert_equal({ from: 'Berlin', to: 'Hamburg', timeOfArrival: '12:00', precipitation: '10', temperature: '5', caboose: 'yes' },
                  LocomotiveEngineer.extend_route_information({ from: 'Berlin', to: 'Hamburg' },
                                                              { timeOfArrival: '12:00', precipitation: '10',
@@ -75,7 +75,7 @@ class LocomotiveEngineerTest < Minitest::Test
   end
 
   def test_extend_route_information_with_three_extra_inputs
-    skip
+    # skip
     assert_equal({ from: 'Paris', to: 'London', timeOfArrival: '10:30', temperature: '20', length: '15' },
                  LocomotiveEngineer.extend_route_information({ from: 'Paris', to: 'London' },
                                                              { timeOfArrival: '10:30', temperature: '20',
@@ -83,7 +83,7 @@ class LocomotiveEngineerTest < Minitest::Test
   end
 
   def test_extend_route_information_with_three_extra_inputs_with_different_information
-    skip
+    # skip
     assert_equal({ from: 'Gothenburg', to: 'Copenhagen', precipitation: '1', timeOfArrival: '21:20', temperature: '-6' },
                  LocomotiveEngineer.extend_route_information({ from: 'Gothenburg', to: 'Copenhagen' },
                                                              { precipitation: '1', timeOfArrival: '21:20',
