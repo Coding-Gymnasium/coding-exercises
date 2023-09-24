@@ -10,7 +10,7 @@ class MatrixTest < Minitest::Test
   end
 
   def test_can_extract_row
-    skip
+    # skip
     matrix = Matrix.new("1 2\n3 4")
     assert_equal [3, 4], matrix.row(2)
   end
