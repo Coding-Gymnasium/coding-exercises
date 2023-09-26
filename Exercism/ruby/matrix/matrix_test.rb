@@ -16,13 +16,13 @@ class MatrixTest < Minitest::Test
   end
 
   def test_extract_row_where_numbers_have_different_widths
-    skip
+    # skip
     matrix = Matrix.new("1 2\n10 20")
     assert_equal [10, 20], matrix.row(2)
   end
 
   def test_can_extract_row_from_non_square_matrix_with_no_corresponding_column
-    skip
+    # skip
     matrix = Matrix.new("1 2 3\n4 5 6\n7 8 9\n8 7 6")
     assert_equal [8, 7, 6], matrix.row(4)
   end
