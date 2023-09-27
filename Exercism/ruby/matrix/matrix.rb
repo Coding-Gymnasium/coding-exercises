@@ -9,10 +9,17 @@ class Matrix
   def initialize(matrix)
     @matrix = []
     create_matrix(matrix)
+    @rows_count = @matrix.length
+    @row_length = @matrix[0].length
   end
 
   def row(number)
     @matrix[number - 1]
+  end
+
+  def column(column_number)
+    row_index = column_number - 1
+    @matrix.map { |arr| arr[row_index] }
   end
 
   private
