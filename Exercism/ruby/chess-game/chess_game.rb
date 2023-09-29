@@ -6,14 +6,14 @@ module Chess
   FILES = 'A'..'H'
 
   def self.valid_square?(rank, file)
-    raise "Please implement the Chess.valid_square? method"
+    RANKS.include?(rank) && FILES.include?(file)
   end
 
-  def self.nick_name(first_name, last_name)
-    raise "Please implement the Chess.nick_name method"
+  def self.nick_name(_first_name, _last_name)
+    raise 'Please implement the Chess.nick_name method'
   end
 
-  def self.move_message(first_name, last_name, square)
-    raise "Please implement the Chess.move_message method"
+  def self.move_message(_first_name, _last_name, _square)
+    raise 'Please implement the Chess.move_message method'
   end
 end

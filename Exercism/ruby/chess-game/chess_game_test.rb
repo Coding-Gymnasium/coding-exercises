@@ -11,27 +11,27 @@ class ChessTest < Minitest::Test
   end
 
   def test_true_when_given_a_valid_square
-    skip
+    # skip
     assert Chess.valid_square?(1, 'A')
   end
 
   def test_true_for_another_valid_square
-    skip
+    # skip
     assert Chess.valid_square?(8, 'H')
   end
 
   def test_false_when_rank_is_out_of_range
-    skip
+    # skip
     refute Chess.valid_square?(9, 'B')
   end
 
   def test_false_when_file_is_out_of_range
-    skip
+    # skip
     refute Chess.valid_square?(1, 'I')
   end
 
   def test_false_when_rank_is_less_than_one
-    skip
+    # skip
     refute Chess.valid_square?(0, 'A')
   end
 
