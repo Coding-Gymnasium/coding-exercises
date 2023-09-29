@@ -9,8 +9,10 @@ module Chess
     RANKS.include?(rank) && FILES.include?(file)
   end
 
-  def self.nick_name(_first_name, _last_name)
-    raise 'Please implement the Chess.nick_name method'
+  def self.nick_name(first_name, last_name)
+    first_two = first_name[0..1]
+    last_two = last_name[-2..]
+    "#{first_two}#{last_two}".upcase
   end
 
   def self.move_message(_first_name, _last_name, _square)

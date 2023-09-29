@@ -36,17 +36,17 @@ class ChessTest < Minitest::Test
   end
 
   def test_correct_player_nick_name
-    skip
+    # skip
     assert_equal 'JOOE', Chess.nick_name('John', 'Doe')
   end
 
   def test_correct_nickname_for_2_letter_last_name
-    skip
+    # skip
     assert_equal 'LILI', Chess.nick_name('Lisa', 'Li')
   end
 
   def test_correct_nickname_for_2_letter_first_name
-    skip
+    # skip
     assert_equal 'DJER', Chess.nick_name('Dj', 'Walker')
   end
 
