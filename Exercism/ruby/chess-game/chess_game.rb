@@ -15,7 +15,14 @@ module Chess
     "#{first_two}#{last_two}".upcase
   end
 
-  def self.move_message(_first_name, _last_name, _square)
-    raise 'Please implement the Chess.move_message method'
+  def self.move_message(first_name, last_name, square)
+    n_name = nick_name(first_name, last_name)
+    files = square[0]
+    ranks = square[1].to_i
+    if valid_square?(ranks, files)
+      "#{n_name} moved to #{square}"
+    else
+      "#{n_name} attempted to move to #{square}, but that is not a valid square"
+    end
   end
 end

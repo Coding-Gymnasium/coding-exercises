@@ -51,23 +51,23 @@ class ChessTest < Minitest::Test
   end
 
   def test_correct_message_for_a_move
-    skip
+    # skip
     assert_equal 'JOOE moved to A2', Chess.move_message('John', 'Doe', 'A2')
   end
 
   def test_correct_message_when_moving_to_corner
-    skip
+    # skip
     assert_equal 'LILI moved to H8', Chess.move_message('Lisa', 'Li', 'H8')
   end
 
   def test_incorrect_message_when_out_of_board
-    skip
+    # skip
     assert_equal 'DJER attempted to move to I9, but that is not a valid square',
                  Chess.move_message('Dj', 'Walker', 'I9')
   end
 
   def test_incorrect_message_when_being_on_rank_0
-    skip
+    # skip
     assert_equal 'TOON attempted to move to A0, but that is not a valid square',
                  Chess.move_message('Tore', 'Anderson', 'A0')
   end
