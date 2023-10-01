@@ -71,27 +71,27 @@ describe("Price for pizza caprese with a lot of extra toppings", () => {
 });
 
 describe("Order price for no pizzas", () => {
-  xit("orderPrice([])", () => {
+  it("orderPrice([])", () => {
     expect(orderPrice([])).toBe(0);
   });
 });
 
 describe("Order price for a single pizza caprese", () => {
-  xit("orderPrice([PizzaOrder('Caprese')])", () => {
+  it("orderPrice([PizzaOrder('Caprese')])", () => {
     const order = new PizzaOrder("Caprese");
     expect(orderPrice([order])).toBe(9);
   });
 });
 
 describe("Order price for a single pizza formaggio with extra sauce", () => {
-  xit("orderPrice([PizzaOrder('Formaggio', 'ExtraSauce')])", () => {
+  it("orderPrice([PizzaOrder('Formaggio', 'ExtraSauce')])", () => {
     const order = new PizzaOrder("Formaggio", "ExtraSauce");
     expect(orderPrice([order])).toBe(11);
   });
 });
 
 describe("Order price for one pizza margherita and one pizza caprese with extra toppings", () => {
-  xit("orderPrice([PizzaOrder('Margherita'), PizzaOrder('Caprese', 'ExtraToppings')])", () => {
+  it("orderPrice([PizzaOrder('Margherita'), PizzaOrder('Caprese', 'ExtraToppings')])", () => {
     const margherita = new PizzaOrder("Margherita");
     const caprese = new PizzaOrder("Caprese", "ExtraToppings");
 
@@ -103,7 +103,7 @@ describe("Order price for one pizza margherita and one pizza caprese with extra 
 });
 
 describe("Order price for one pizza margherita with a LOT of sauce and one pizza caprese with a LOT of toppings", () => {
-  xit("orderPrice([PizzaOrder('Margherita', 'ExtraSauce', 'ExtraSauce', 'ExtraSauce'), PizzaOrder('Caprese', 'ExtraToppings', 'ExtraToppings', 'ExtraToppings', 'ExtraToppings')])", () => {
+  it("orderPrice([PizzaOrder('Margherita', 'ExtraSauce', 'ExtraSauce', 'ExtraSauce'), PizzaOrder('Caprese', 'ExtraToppings', 'ExtraToppings', 'ExtraToppings', 'ExtraToppings')])", () => {
     const saucyMargherita = new PizzaOrder(
       "Margherita",
       "ExtraSauce",
@@ -126,7 +126,7 @@ describe("Order price for one pizza margherita with a LOT of sauce and one pizza
 });
 
 describe("Order price for very large order", () => {
-  xit("orderPrice([/* lots of */])", () => {
+  it("orderPrice([/* lots of */])", () => {
     const margherita = new PizzaOrder("Margherita");
     const margherita2 = new PizzaOrder("Margherita", "ExtraSauce");
     const caprese = new PizzaOrder("Caprese");
@@ -161,7 +161,7 @@ describe("Order price for very large order", () => {
 });
 
 describe("Order price for a gigantic order", () => {
-  xit("orderPrice([/* lots of */])", () => {
+  it("orderPrice([/* lots of */])", () => {
     const allTheMargheritas = Array(100 * 1000).fill(
       new PizzaOrder("Margherita")
     );

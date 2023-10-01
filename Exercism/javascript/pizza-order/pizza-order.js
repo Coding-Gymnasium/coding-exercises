@@ -36,5 +36,13 @@ function getAddOnsTotal(extras) {
  * @returns {number} the price of the total order
  */
 export function orderPrice(pizzaOrders) {
-  throw new Error("Please implement the orderPrice function");
+  let total = 0
+  let count = pizzaOrders.length;
+  while (count > 0) {
+    for (const pizza of pizzaOrders) {
+      total += pizzaPrice(pizza.pizza, ...pizza.extras)
+      count--;
+    }
+  }
+  return total;
 }
