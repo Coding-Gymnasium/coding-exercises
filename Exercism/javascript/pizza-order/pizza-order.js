@@ -19,13 +19,14 @@ const itemsPrice = {
  * @returns {number} the price of the pizza
  */
 export function pizzaPrice(pizza, ...extras) {
-  const addOns = [...extras].map((e) => itemsPrice[e]);
-  const addOnsTotal = addOns.reduce((accumulator, current) => {
+  return itemsPrice[pizza] + getAddOnsTotal([...extras]);
+}
+
+function getAddOnsTotal(extras) {
+  const addOns = extras.map((e) => itemsPrice[e]);
+  return addOns.reduce((accumulator, current) => {
     return accumulator + current;
   }, 0);
-
-  const total = itemsPrice[pizza] + addOnsTotal;
-  return total;
 }
 
 /**
