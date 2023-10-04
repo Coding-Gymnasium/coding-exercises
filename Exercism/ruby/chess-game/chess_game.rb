@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Chess Class
 module Chess
   # TODO: define the 'RANKS' constant
   RANKS = 1..8
