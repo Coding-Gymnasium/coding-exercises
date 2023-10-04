@@ -8,6 +8,7 @@
 class Hamming
   def self.compute(strand_one, strand_two)
     return 0 if strand_one.empty? && strand_two.empty?
+    raise ArgumentError, 'Must be same length' if strand_one.length != strand_two.length
 
     s_one_arr = strand_one.chars
     s_two_arr = strand_two.chars
