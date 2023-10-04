@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require_relative 'hamming'
 
@@ -24,7 +26,7 @@ class HammingTest < Minitest::Test
   end
 
   def test_long_different_strands
-    skip
+    # skip
     assert_equal 9, Hamming.compute('GGACGGATTCTG', 'AGGACGGATTCT')
   end
 

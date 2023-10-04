@@ -7,6 +7,16 @@
 # `ruby/hamming` directory.
 class Hamming
   def self.compute(strand_one, strand_two)
-    strand_one == strand_two ? 0 : 1
+    return 0 if strand_one.empty? && strand_two.empty?
+
+    s_one_arr = strand_one.chars
+    s_two_arr = strand_two.chars
+    count = 0
+
+    s_one_arr.each_with_index do |letter, i|
+      count += 1 unless letter == s_two_arr[i]
+    end
+
+    count
   end
 end
