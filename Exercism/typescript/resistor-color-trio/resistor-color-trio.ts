@@ -18,7 +18,8 @@ export function decodedResistorValue(values: string[]): string {
   const valueTwo: number = colorCode[capitalizedValue[1]];
   const valueThree: number = colorCode[capitalizedValue[2]];
 
-  if (valueOne === 0 && valueTwo === 0 && valueThree === 0) return "0 ohms"
+  if (valueOne === 0 && valueTwo === 0 && valueThree === 0) return "0 ohms";
+  if (valueOne === 0 && valueThree === 0) return `${valueTwo} ohms`;
   let zeros: string = "";
 
   for (let i = 1; i <= valueThree; i++) {

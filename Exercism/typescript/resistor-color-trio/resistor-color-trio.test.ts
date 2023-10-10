@@ -43,11 +43,11 @@ describe('Resistor Colors', () => {
     )
   })
 
-  xit('First two colors make an invalid octal number', () => {
+  it('First two colors make an invalid octal number', () => {
     expect(decodedResistorValue(['black', 'grey', 'black'])).toEqual('8 ohms')
   })
 
-  xit('Ignore extra colors', () => {
+  it('Ignore extra colors', () => {
     expect(decodedResistorValue(['blue', 'green', 'yellow', 'orange'])).toEqual(
       '650 kiloohms'
     )
