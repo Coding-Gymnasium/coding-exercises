@@ -23,7 +23,12 @@ export function decodedResistorValue(values: string[]): string {
     zeros = `0${zeros}`;
   }
 
-  return `${valueOne}${valueTwo}${zeros} ohms`;
+  switch (true) {
+    case valueTwo === 0 && valueThree < 3:
+      return `${valueOne} kiloohms`;
+    default:
+      return `${valueOne}${valueTwo}${zeros} ohms`;
+  }
 }
 
 function capitalize(values: string[]): string[] {
