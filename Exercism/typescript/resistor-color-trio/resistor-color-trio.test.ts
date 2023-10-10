@@ -33,7 +33,7 @@ describe('Resistor Colors', () => {
     )
   })
 
-  xit('Minimum possible value', () => {
+  it('Minimum possible value', () => {
     expect(decodedResistorValue(['black', 'black', 'black'])).toEqual('0 ohms')
   })
 
