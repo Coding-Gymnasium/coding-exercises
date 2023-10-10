@@ -20,12 +20,19 @@ export function decodedResistorValue(values: string[]): string {
 
   if (valueOne === 0 && valueTwo === 0 && valueThree === 0) return "0 ohms";
   if (valueOne === 0 && valueThree === 0) return `${valueTwo} ohms`;
-  let zeros: string = "";
 
+  return findCorrectValueType(valueOne, valueTwo, valueThree);
+}
+
+function findCorrectValueType(
+  valueOne: number,
+  valueTwo: number,
+  valueThree: number,
+): string {
+  let zeros: string = "";
   for (let i = 1; i <= valueThree; i++) {
     zeros = `0${zeros}`;
   }
-
   switch (true) {
     case valueTwo === 0 && valueThree < 3:
       return `${valueOne} kiloohms`;
