@@ -34,6 +34,8 @@ export function decodedResistorValue(values: string[]): string {
       return `${valueOne}${valueTwo}0 kiloohms`;
     case valueTwo != 0 && valueThree === 6:
       return `${valueOne}${valueTwo} megaohms`;
+    case valueTwo != 0 && valueThree === 9:
+      return `${valueOne}${valueTwo} gigaohms`;
     default:
       return `${valueOne}${valueTwo}${zeros} ohms`;
   }

@@ -37,7 +37,7 @@ describe('Resistor Colors', () => {
     expect(decodedResistorValue(['black', 'black', 'black'])).toEqual('0 ohms')
   })
 
-  xit('Maximum possible value', () => {
+  it('Maximum possible value', () => {
     expect(decodedResistorValue(['white', 'white', 'white'])).toEqual(
       '99 gigaohms'
     )
