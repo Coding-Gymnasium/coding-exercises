@@ -27,7 +27,7 @@ describe('Resistor Colors', () => {
     )
   })
 
-  xit('Blue and violet and blue', () => {
+  it('Blue and violet and blue', () => {
     expect(decodedResistorValue(['blue', 'violet', 'blue'])).toEqual(
       '67 megaohms'
     )
