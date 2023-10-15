@@ -26,6 +26,7 @@ export class TranslationService {
    * @param {string} text
    * @returns {Promise<string>}
    */
+
   free(text) {
     return this.api.fetch(text).then((data) => data.translation);
   }
@@ -41,7 +42,8 @@ export class TranslationService {
    * @returns {Promise<string[]>}
    */
   batch(texts) {
-    throw new Error("Implement the batch function");
+    // implement batch function
+    return Promise.all(texts.map((text) => this.free(text)));
   }
 
   /**
@@ -84,7 +86,7 @@ export class QualityThresholdNotMet extends Error {
     super(
       `
 The translation of ${text} does not meet the requested quality threshold.
-    `.trim(),
+    `.trim()
     );
 
     this.text = text;
@@ -100,7 +102,7 @@ export class BatchIsEmpty extends Error {
     super(
       `
 Requested a batch translation, but there are no texts in the batch.
-    `.trim(),
+    `.trim()
     );
   }
 }
