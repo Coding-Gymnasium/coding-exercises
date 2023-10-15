@@ -8,8 +8,14 @@
 class Raindrops
   def self.convert(number)
     case true
-    when number.even?
-      number.to_s
+    when (number % 3).zero? && (number % 5).zero? && (number % 7).zero?
+      'PlingPlangPlong'
+    when (number % 3).zero? && (number % 5).zero?
+      'PlingPlang'
+    when (number % 3).zero? && (number % 7).zero?
+      'PlingPlong'
+    when (number % 5).zero? && (number % 7).zero?
+      'PlangPlong'
     when (number % 3).zero?
       'Pling'
     when (number % 5).zero?
