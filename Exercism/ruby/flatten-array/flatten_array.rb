@@ -7,6 +7,6 @@
 # `ruby/flatten-array` directory.
 class FlattenArray
   def self.flatten(array)
-    array.flatten
+    array.flatten.compact
   end
 end
