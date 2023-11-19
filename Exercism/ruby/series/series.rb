@@ -11,15 +11,19 @@ class Series
   end
 
   def slices(series_length)
-    # compare the num_arr length to the series length and substract the difference
-    # If it's equal return the original in an array.
     num_arr = @number.chars
+    diff = num_arr.length - series_length
+    multi_array = []
+    count = diff
+
     return num_arr if series_length == 1
 
-    # If there is a difference push into an array the slice matching the series_length number. Then move to the next index up and repeat until for the number of times that equals the difference.
-    diff = num_arr.length - series_length
-    puts "Diff: #{diff}"
-    puts "Sliced:  #{@number.slice(0, series_length)}"
     [@number] if diff.zero?
+
+    num_arr.each_with_index do |_num, i|
+      multi_array.push(num_arr.slice(i, series_length).join("")) unless i > count
+    end
+
+    multi_array
   end
 end
