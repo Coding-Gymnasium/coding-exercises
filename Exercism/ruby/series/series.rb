@@ -6,4 +6,11 @@
 # `ruby/series` directory.
 
 class Series
+  def initialize(number)
+    @number = number
+  end
+
+  def slices(length)
+    @number.split(" ")
+  end
 end
