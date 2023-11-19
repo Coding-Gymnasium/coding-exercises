@@ -11,6 +11,9 @@ class Series
   end
 
   def slices(length)
-    @number.split(" ")
+    # @number.split(" ")
+    num_arr = @number.chars
+    puts num_arr.length
+    num_arr
   end
 end
