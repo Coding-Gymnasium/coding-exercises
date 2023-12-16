@@ -15,8 +15,14 @@ module Blackjack
     end
   end
 
-  def self.card_range(_card1, _card2)
-    raise "Please implement the Blackjack.card_range method"
+  def self.card_range(card1, card2)
+    addition = parse_card(card1) + parse_card(card2)
+    case addition
+    when 4..11 then "low"
+    when 12..16 then "mid"
+    when 17..20 then "high"
+    when 21 then "blackjack"
+    end
   end
 
   def self.first_turn(_card1, _card2, _dealer_card)

@@ -59,52 +59,42 @@ class BlackjackTest < Minitest::Test
   end
 
   def test_lower_low_range
-    skip
     assert_equal "low", Blackjack.card_range("two", "two")
   end
 
   def test_mid_low_range
-    skip
     assert_equal "low", Blackjack.card_range("three", "four")
   end
 
   def test_upper_low_range
-    skip
     assert_equal "low", Blackjack.card_range("four", "seven")
   end
 
   def test_lower_mid_range
-    skip
     assert_equal "mid", Blackjack.card_range("seven", "five")
   end
 
   def test_mid_mid_range
-    skip
     assert_equal "mid", Blackjack.card_range("seven", "seven")
   end
 
   def test_upper_mid_range
-    skip
     assert_equal "mid", Blackjack.card_range("nine", "seven")
   end
 
   def test_lower_high_range
-    skip
     assert_equal "high", Blackjack.card_range("nine", "eight")
   end
 
   def test_mid_high_range
-    skip
     assert_equal "high", Blackjack.card_range("eight", "queen")
   end
 
   def test_upper_high_range
-    skip
     assert_equal "high", Blackjack.card_range("king", "ten")
   end
 
   def test_blackjack_range
-    skip
     assert_equal "blackjack", Blackjack.card_range("ace", "ten")
   end
 
