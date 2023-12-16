@@ -16,9 +16,8 @@ class Series
     multi_array = []
     count = diff
 
-    raise ArgumentError.new("Number cannot be empty") if @number.empty?
-    raise ArgumentError.new("Slice length is too large") if diff < 0
-    raise ArgumentError.new("Slice length cannot be negative") if series_length <= 0
+    check_arguments(@number, series_length, diff)
+
     return num_arr if series_length == 1
 
     [@number] if diff.zero?
@@ -28,5 +27,13 @@ class Series
     end
 
     multi_array
+  end
+
+  private
+
+  def check_arguments(number, length, diff)
+    raise ArgumentError, "Number cannot be empty" if number.empty?
+    raise ArgumentError, "Slice length is too large" if diff.negative?
+    raise ArgumentError, "Slice length cannot be negative" if length <= 0
   end
 end
