@@ -16,6 +16,9 @@ class Series
     multi_array = []
     count = diff
 
+    raise ArgumentError.new("Number cannot be empty") if @number.empty?
+    raise ArgumentError.new("Slice length is too large") if diff < 0
+    raise ArgumentError.new("Slice length cannot be negative") if series_length <= 0
     return num_arr if series_length == 1
 
     [@number] if diff.zero?

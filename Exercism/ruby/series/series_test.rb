@@ -40,7 +40,7 @@ class SeriesTest < Minitest::Test
   end
 
   def test_slice_length_is_too_large
-    skip
+    # skip
     slice_string = "12345"
     series = Series.new(slice_string)
     assert_raises ArgumentError do
@@ -49,7 +49,7 @@ class SeriesTest < Minitest::Test
   end
 
   def test_slice_length_cannot_be_zero
-    skip
+    # skip
     slice_string = "12345"
     series = Series.new(slice_string)
     assert_raises ArgumentError do
@@ -58,7 +58,7 @@ class SeriesTest < Minitest::Test
   end
 
   def test_slice_length_cannot_be_negative
-    skip
+    # skip
     slice_string = "123"
     series = Series.new(slice_string)
     assert_raises ArgumentError do
@@ -67,7 +67,7 @@ class SeriesTest < Minitest::Test
   end
 
   def test_empty_series_is_invalid
-    skip
+    # skip
     slice_string = ""
     series = Series.new(slice_string)
     assert_raises ArgumentError do
