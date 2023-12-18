@@ -28,9 +28,9 @@ module Blackjack
   def self.first_turn(card1, card2, dealercard)
     sum = parse_card(card1) + parse_card(card2)
     range = card_range(card1, card2)
-    if %w[high mid].include?(range) || (sum == 21 && dealercard == "ace")
+    if %w[high].include?(range) || (%w[mid].include?(range) && parse_card(dealercard) < 7) || (sum == 21 && dealercard == "ace")
       "S"
-    elsif sum <= 11
+    elsif sum <= 11 || (%w[mid].include?(range) && parse_card(dealercard) >= 7)
       "H"
     elsif card1 == "ace" && card2 == "ace"
       "P"
