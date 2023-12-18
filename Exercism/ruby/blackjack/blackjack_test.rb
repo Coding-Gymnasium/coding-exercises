@@ -124,47 +124,47 @@ class BlackjackTest < Minitest::Test
   end
 
   def test_first_turn_blackjack_with_ace_for_dealer
-    skip
+    # skip
     assert_equal "S", Blackjack.first_turn("ace", "king", "ace")
   end
 
   def test_first_turn_blackjack_with_queen_for_dealer
-    skip
+    # skip
     assert_equal "S", Blackjack.first_turn("jack", "king", "queen")
   end
 
   def test_first_turn_blackjack_with_five_for_dealer
-    skip
+    # skip
     assert_equal "W", Blackjack.first_turn("ace", "king", "five")
   end
 
   def test_first_turn_blackjack_with_nine_for_dealer
-    skip
+    # skip
     assert_equal "W", Blackjack.first_turn("ace", "king", "none")
   end
 
   def test_first_turn_score_of_20
-    skip
+    # skip
     assert_equal "S", Blackjack.first_turn("king", "queen", "ace")
   end
 
   def test_first_turn_score_of_19
-    skip
+    # skip
     assert_equal "S", Blackjack.first_turn("king", "nine", "ace")
   end
 
   def test_first_turn_score_of_18
-    skip
+    # skip
     assert_equal "S", Blackjack.first_turn("queen", "eight", "ace")
   end
 
   def test_first_turn_score_of_17
-    skip
+    # skip
     assert_equal "S", Blackjack.first_turn("jack", "seven", "ace")
   end
 
   def test_first_turn_score_of_16_with_six_for_dealer
-    skip
+    # skip
     assert_equal "S", Blackjack.first_turn("jack", "six", "six")
   end
 
