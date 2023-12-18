@@ -99,27 +99,27 @@ class BlackjackTest < Minitest::Test
   end
 
   def test_first_turn_pair_of_aces
-    skip
+    # skip
     assert_equal "P", Blackjack.first_turn("ace", "ace", "ace")
   end
 
   def test_first_turn_pair_of_jacks
-    skip
+    # skip
     assert_equal "S", Blackjack.first_turn("jack", "jack", "ace")
   end
 
   def test_first_turn_pair_of_queens
-    skip
+    # skip
     assert_equal "S", Blackjack.first_turn("queen", "queen", "ace")
   end
 
   def test_first_turn_pair_of_twos
-    skip
+    # skip
     assert_equal "H", Blackjack.first_turn("two", "two", "ace")
   end
 
   def test_first_turn_pair_of_five
-    skip
+    # skip
     assert_equal "H", Blackjack.first_turn("five", "five", "ace")
   end
 

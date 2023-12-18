@@ -16,24 +16,26 @@ module Blackjack
   end
 
   def self.card_range(card1, card2)
-    addition = parse_card(card1) + parse_card(card2)
-    case addition
+    sum = parse_card(card1) + parse_card(card2)
+    case sum
     when 4..11 then "low"
-    when 12..16 then "mid"
     when 17..20 then "high"
+    when 12..16 then "mid"
     when 21 then "blackjack"
     end
   end
 
-  def self.first_turn(_card1, _card2, _dealer_card)
-    raise "Please implement the Blackjack.first_turn method"
+  def self.first_turn(card1, card2, dealercard)
+    sum = parse_card(card1) + parse_card(card2)
+    range = card_range(card1, card2)
+    if %w[high mid].include?(range)
+      "S"
+    elsif sum <= 11
+      "H"
+    elsif card1 == "ace" && card2 == "ace"
+      "P"
+    elsif sum == 21 && (dealercard != "ace" || parse_card(dealercard) != 10)
+      "W"
+    end
   end
 end
-
-# ace	11	eight	8
-# two	2	nine	9
-# three	3	ten	10
-# four	4	jack	10
-# five	5	queen	10
-# six	6	king	10
-# seven	7	other	0
