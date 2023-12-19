@@ -38,21 +38,21 @@ class AtbashCipherTest < Minitest::Test
   end
 
   def test_encode_numbers
-    skip
+    # skip
     plaintext = "Testing,1 2 3, testing."
     ciphertext = "gvhgr mt123 gvhgr mt"
     assert_equal ciphertext, Atbash.encode(plaintext)
   end
 
   def test_encode_deep_thought
-    skip
+    # skip
     plaintext = "Truth is fiction."
     ciphertext = "gifgs rhurx grlm"
     assert_equal ciphertext, Atbash.encode(plaintext)
   end
 
   def test_encode_all_the_letters
-    skip
+    # skip
     plaintext = "The quick brown fox jumps over the lazy dog."
     ciphertext = "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
     assert_equal ciphertext, Atbash.encode(plaintext)
