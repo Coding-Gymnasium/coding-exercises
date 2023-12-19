@@ -15,7 +15,23 @@ class Atbash
 
   def self.encode(plaintext)
     cyphertext = []
-    plaintext.downcase.chars.each { |letter| cyphertext.push(PLAIN[letter.to_sym]) if /[ A-Za-z]/.match?(letter) }
-    cyphertext.join("")
+    plaintext.downcase.chars.each do |letter|
+      cyphertext.push(PLAIN[letter.to_sym]) if /[ A-Za-z]/.match?(letter)
+    end
+    parse_cypher(cyphertext)
+  end
+
+  def self.parse_cypher(arr)
+    new_arr = []
+    count = 1
+    if arr.length > 5
+      arr.each do |el|
+        (count == 5) ? new_arr.push("#{el} ") && count = 0 : new_arr.push(el)
+        count += 1
+      end
+      new_arr.join("")
+    else
+      arr.join("")
+    end
   end
 end

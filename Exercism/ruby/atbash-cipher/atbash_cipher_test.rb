@@ -31,7 +31,7 @@ class AtbashCipherTest < Minitest::Test
   end
 
   def test_encode_mindblowingly
-    skip
+    # skip
     plaintext = "mindblowingly"
     ciphertext = "nrmwy oldrm tob"
     assert_equal ciphertext, Atbash.encode(plaintext)
