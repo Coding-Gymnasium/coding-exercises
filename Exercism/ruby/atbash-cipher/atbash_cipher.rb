@@ -22,6 +22,17 @@ class Atbash
     parse_cypher(cyphertext)
   end
 
+  def self.decode(cyphertext)
+    encoded = cyphertext.gsub(/\s+/, "").chars
+    encoded.map do |e|
+      if /[a-z]/.match?(e)
+        PLAIN[e.to_sym]
+      else
+        e
+      end
+    end.join("")
+  end
+
   def self.parse_cypher(arr)
     new_arr = []
     count = 1

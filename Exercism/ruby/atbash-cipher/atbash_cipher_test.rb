@@ -59,42 +59,42 @@ class AtbashCipherTest < Minitest::Test
   end
 
   def test_decode_exercism
-    skip
+    # skip
     ciphertext = "vcvix rhn"
     plaintext = "exercism"
     assert_equal plaintext, Atbash.decode(ciphertext)
   end
 
   def test_decode_a_sentence
-    skip
+    # skip
     ciphertext = "zmlyh gzxov rhlug vmzhg vkkrm thglm v"
     plaintext = "anobstacleisoftenasteppingstone"
     assert_equal plaintext, Atbash.decode(ciphertext)
   end
 
   def test_decode_numbers
-    skip
+    # skip
     ciphertext = "gvhgr mt123 gvhgr mt"
     plaintext = "testing123testing"
     assert_equal plaintext, Atbash.decode(ciphertext)
   end
 
   def test_decode_all_the_letters
-    skip
+    # skip
     ciphertext = "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
     plaintext = "thequickbrownfoxjumpsoverthelazydog"
     assert_equal plaintext, Atbash.decode(ciphertext)
   end
 
   def test_decode_with_too_many_spaces
-    skip
+    # skip
     ciphertext = "vc vix    r hn"
     plaintext = "exercism"
     assert_equal plaintext, Atbash.decode(ciphertext)
   end
 
   def test_decode_with_no_spaces
-    skip
+    # skip
     ciphertext = "zmlyhgzxovrhlugvmzhgvkkrmthglmv"
     plaintext = "anobstacleisoftenasteppingstone"
     assert_equal plaintext, Atbash.decode(ciphertext)
