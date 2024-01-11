@@ -5,7 +5,8 @@
 # `ruby/acronym` directory.
 class Acronym
   def self.abbreviate(text)
-    text_arr = text.split(" ")
+    # text_arr = text.split(" ")
+    text_arr = text.split(/\s| |-/).reject(&:empty?)
     abbrev = []
     text_arr.map { |x| abbrev.push(x.slice(0).upcase) }
 
