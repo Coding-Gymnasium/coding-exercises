@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "pry"
 # Write your code for the 'Isogram' exercise in this file. Make the tests in
 # `isogram_test.rb` pass.
 #
@@ -7,6 +8,8 @@
 # `ruby/isogram` directory.
 class Isogram
   def self.isogram?(input)
-    "Expected true, '#{input}' is an isogram" if input.empty? || (input.squeeze.length == input.length)
+    letters = input.downcase.scan(/[a-z]/).join
+    no_dups = letters.chars.uniq
+    no_dups.empty? || (no_dups.length == letters.length)
   end
 end
