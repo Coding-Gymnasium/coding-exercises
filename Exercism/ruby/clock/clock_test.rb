@@ -8,7 +8,7 @@ class ClockTest < Minitest::Test
   end
 
   def test_past_the_hour
-    skip
+    # skip
     assert_equal "11:09", Clock.new(hour: 11, minute: 9).to_s
   end
 

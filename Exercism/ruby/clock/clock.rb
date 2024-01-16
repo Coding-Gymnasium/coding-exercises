@@ -4,9 +4,12 @@
 # To get started with TDD, see the `README.md` file in your
 # `ruby/clock` directory.
 class Clock
-  def self.new(args)
-    @hour = args[:hour]
-    @time = "0#{@hour}:00".to_f
-    @time
+  def initialize(hour: 0, minute: 0)
+    @hour = hour
+    @minute = minute
+  end
+
+  def to_s
+    format("%<hour>.2d:%<minute>.2d", hour: @hour, minute: @minute)
   end
 end
