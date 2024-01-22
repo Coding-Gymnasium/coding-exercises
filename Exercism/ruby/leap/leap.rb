@@ -7,6 +7,10 @@ require_relative "leap_test"
 # Unless the year is evenly divisible by 100,
 # in which case it's only a leap year if the year is also evenly divisible by 400
 ##
+class Date
+  def leap?; end
+end
+
 class Year < Date
   def self.leap?(number)
     (number % 400).zero?
