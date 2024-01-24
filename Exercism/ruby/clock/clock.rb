@@ -26,4 +26,8 @@ class Clock
   def to_s
     format("%<hour>.2d:%<minute>.2d", hour: hour, minute: minutes)
   end
+
+  def +(other)
+    Clock.new(hour: hour + other.hour, minute: minutes + other.minutes)
+  end
 end
