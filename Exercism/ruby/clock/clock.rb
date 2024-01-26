@@ -34,4 +34,8 @@ class Clock
   def -(other)
     Clock.new(hour: hour - other.hour, minute: minutes - other.minutes)
   end
+
+  def ==(other)
+    total_minutes == other.total_minutes
+  end
 end
