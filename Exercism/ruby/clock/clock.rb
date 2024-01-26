@@ -30,4 +30,8 @@ class Clock
   def +(other)
     Clock.new(hour: hour + other.hour, minute: minutes + other.minutes)
   end
+
+  def -(other)
+    Clock.new(hour: hour - other.hour, minute: minutes - other.minutes)
+  end
 end
