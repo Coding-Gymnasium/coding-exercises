@@ -35,10 +35,8 @@ module.exports = {
       extends: "@exercism/eslint-config-typescript/maintainers",
     },
   ],
-  {
-    "extends": "standard",
-    "rules": {
-        "semi": [2, "always"]
-    }
-},
+  extends: "standard",
+  rules: {
+    semi: [2, "always"],
+  },
 };
