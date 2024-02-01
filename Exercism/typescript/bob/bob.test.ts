@@ -46,12 +46,12 @@ describe("Bob", () => {
     expect(result).toEqual("Calm down, I know what I'm doing!");
   });
 
-  xit("shouting numbers", () => {
+  it("shouting numbers", () => {
     const result = hey("1, 2, 3 GO!");
     expect(result).toEqual("Whoa, chill out!");
   });
 
-  xit("no letters", () => {
+  it("no letters", () => {
     const result = hey("1, 2, 3");
     expect(result).toEqual("Whatever.");
   });

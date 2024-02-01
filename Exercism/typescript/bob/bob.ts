@@ -4,6 +4,8 @@ export function hey(message: string): string {
   switch (true) {
     case forcefulQuestion(message):
       return "Calm down, I know what I'm doing!";
+    case onlyNumbers(message):
+      return "Whatever.";
     case isYelling(message):
       return "Whoa, chill out!";
     case isQuestion(message):
@@ -20,9 +22,14 @@ function isQuestion(str: string): boolean {
 }
 
 function isYelling(str: string): boolean {
-  return str.toUpperCase() === str;
+  return str.toUpperCase() === str && !onlyNumbers(str);
 }
 
 function forcefulQuestion(str: string) {
   return isQuestion(str) && isYelling(str);
+}
+
+function onlyNumbers(str: string) {
+  const text = str.split(",").join("");
+  return /^\d*$/.test(text) && typeof +text === "number";
 }
