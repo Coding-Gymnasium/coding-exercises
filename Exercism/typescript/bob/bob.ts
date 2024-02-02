@@ -31,5 +31,6 @@ function forcefulQuestion(str: string) {
 
 function onlyNumbers(str: string) {
   const text = str.split(",").join("");
-  return /^\d*$/.test(text) && typeof +text === "number";
+  const trimmed = text.replace(/ /g, "");
+  return /^\d*$/.test(trimmed) && typeof +trimmed === "number";
 }
