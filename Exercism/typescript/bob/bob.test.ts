@@ -56,7 +56,7 @@ describe("Bob", () => {
     expect(result).toEqual("Whatever.");
   });
 
-  xit("question with no letters", () => {
+  it("question with no letters", () => {
     const result = hey("4?");
     expect(result).toEqual("Sure.");
   });

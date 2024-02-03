@@ -18,15 +18,15 @@ export function hey(message: string): string {
 }
 
 function isQuestion(str: string): boolean {
-  return str.includes("?");
+  return str.endsWith("?");
 }
 
 function isYelling(str: string): boolean {
-  return str.toUpperCase() === str && !onlyNumbers(str);
+  return str.toUpperCase() === str && !onlyNumbers(str.slice(0, -1));
 }
 
 function forcefulQuestion(str: string) {
-  return isQuestion(str) && isYelling(str);
+  return isQuestion(str) && isYelling(str.slice(0, -1));
 }
 
 function onlyNumbers(str: string) {
