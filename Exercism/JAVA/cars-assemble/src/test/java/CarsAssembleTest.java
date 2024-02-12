@@ -24,7 +24,7 @@ public class CarsAssembleTest {
     assertThat(carsAssemble.productionRatePerHour(0)).isCloseTo(0.0, within(epsilon));
   }
 
-  @Disabled
+  // @Disabled
   @Test
   @Tag("task:1")
   @DisplayName("The productionRatePerHour method returns the correct result when line's speed is 1")
