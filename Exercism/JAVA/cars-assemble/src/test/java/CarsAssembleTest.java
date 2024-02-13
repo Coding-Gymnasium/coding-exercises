@@ -32,7 +32,7 @@ public class CarsAssembleTest {
     assertThat(carsAssemble.productionRatePerHour(1)).isCloseTo(221.0, within(epsilon));
   }
 
-  @Disabled
+  // @Disabled
   @Test
   @Tag("task:1")
   @DisplayName("The productionRatePerHour method returns the correct result when line's speed is 4")
@@ -40,7 +40,7 @@ public class CarsAssembleTest {
     assertThat(carsAssemble.productionRatePerHour(4)).isCloseTo(884.0, within(epsilon));
   }
 
-  @Disabled
+  // @Disabled
   @Test
   @Tag("task:1")
   @DisplayName("The productionRatePerHour method returns the correct result when line's speed is 7")
@@ -48,7 +48,7 @@ public class CarsAssembleTest {
     assertThat(carsAssemble.productionRatePerHour(7)).isCloseTo(1392.3, within(epsilon));
   }
 
-  @Disabled
+  // @Disabled
   @Test
   @Tag("task:1")
   @DisplayName("The productionRatePerHour method returns the correct result when line's speed is 9")
@@ -56,7 +56,7 @@ public class CarsAssembleTest {
     assertThat(carsAssemble.productionRatePerHour(9)).isCloseTo(1591.2, within(epsilon));
   }
 
-  @Disabled
+  // @Disabled
   @Test
   @Tag("task:1")
   @DisplayName("The productionRatePerHour method returns the correct result when line's speed is 10")
