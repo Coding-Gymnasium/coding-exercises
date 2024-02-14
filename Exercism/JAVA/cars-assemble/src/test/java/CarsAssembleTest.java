@@ -64,7 +64,7 @@ public class CarsAssembleTest {
     assertThat(carsAssemble.productionRatePerHour(10)).isCloseTo(1701.7, within(epsilon));
   }
 
-  @Disabled
+  // @Disabled
   @Test
   @Tag("task:2")
   @DisplayName("The workingItemsPerMinute should be 0 when line's speed is 0")
@@ -72,7 +72,7 @@ public class CarsAssembleTest {
     assertThat(carsAssemble.workingItemsPerMinute(0)).isEqualTo(0);
   }
 
-  @Disabled
+  // @Disabled
   @Test
   @Tag("task:2")
   @DisplayName("The workingItemsPerMinute should be 3 when line's speed is 1")
@@ -80,7 +80,7 @@ public class CarsAssembleTest {
     assertThat(carsAssemble.workingItemsPerMinute(1)).isEqualTo(3);
   }
 
-  @Disabled
+  // @Disabled
   @Test
   @Tag("task:2")
   @DisplayName("The workingItemsPerMinute should be 16 when line's speed is 5")
@@ -88,7 +88,7 @@ public class CarsAssembleTest {
     assertThat(carsAssemble.workingItemsPerMinute(5)).isEqualTo(16);
   }
 
-  @Disabled
+  // @Disabled
   @Test
   @Tag("task:2")
   @DisplayName("The workingItemsPerMinute should be 26 when line's speed is 8")
@@ -96,7 +96,7 @@ public class CarsAssembleTest {
     assertThat(carsAssemble.workingItemsPerMinute(8)).isEqualTo(26);
   }
 
-  @Disabled
+  // @Disabled
   @Test
   @Tag("task:2")
   @DisplayName("The workingItemsPerMinute should be 26 when line's speed is 9")
@@ -104,7 +104,7 @@ public class CarsAssembleTest {
     assertThat(carsAssemble.workingItemsPerMinute(9)).isEqualTo(26);
   }
 
-  @Disabled
+  // @Disabled
   @Test
   @Tag("task:2")
   @DisplayName("The workingItemsPerMinute should be 28 when line's speed is 10")

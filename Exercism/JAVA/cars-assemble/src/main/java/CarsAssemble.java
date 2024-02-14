@@ -1,7 +1,7 @@
 public class CarsAssemble {
 
   public double productionRatePerHour(double speed) {
-    final double MEAN_SPEED = 221.0 * speed;
+    final double MEAN_SPEED = find_speed(speed);
     if (speed <= 4) {
       return MEAN_SPEED;
     } else if (speed >= 5 && speed <= 8) {
@@ -16,6 +16,10 @@ public class CarsAssemble {
   }
 
   public int workingItemsPerMinute(int speed) {
-    throw new UnsupportedOperationException("Please implement the CarsAssemble.workingItemsPerMinute() method");
+    return (int) (Math.floor(productionRatePerHour(speed) / 60));
+  }
+
+  private double find_speed(double speed) {
+    return 221 * speed;
   }
 }
