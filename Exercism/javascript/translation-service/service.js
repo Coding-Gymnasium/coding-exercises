@@ -27,7 +27,7 @@ export class TranslationService {
    * @returns {Promise<string>}
    */
   free(text) {
-    return this.api.fetch(text).then((data) => data.translation);
+    return this.api.fetch(text).then((response) => response.translation);
   }
 
   /**
