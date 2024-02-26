@@ -29,14 +29,14 @@ describe("Free service", () => {
     await expect(actual).resolves.toBe(expected);
   });
 
-  xtest("it forwards NotAvailable errors from the API, unaltered", async () => {
+  test("it forwards NotAvailable errors from the API, unaltered", async () => {
     const actual = service.free("jIyajbe’");
     const expected = NotAvailable;
 
     await expect(actual).rejects.toThrow(expected);
   });
 
-  xtest("it forwards Untranslatable errors from the API, unaltered", async () => {
+  test("it forwards Untranslatable errors from the API, unaltered", async () => {
     const actual = service.free("majQa’");
     const expected = Untranslatable;
 
