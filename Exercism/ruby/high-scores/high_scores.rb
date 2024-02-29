@@ -24,8 +24,8 @@ class HighScores
     top_three = []
     3.times do
       top_three.push(arr.max)
-      arr.slice!(arr.find_index(arr.max))
+      arr.delete_at(arr.find_index(arr.max))
     end
-    top_three.uniq
+    top_three
   end
 end
