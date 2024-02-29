@@ -20,12 +20,19 @@ class HighScores
   end
 
   def personal_top_three
+    length = @scores.length
     arr = *@scores
     top_three = []
     3.times do
+      break if top_three.length == length
+
       top_three.push(arr.max)
       arr.delete_at(arr.find_index(arr.max))
     end
     top_three
+  end
+
+  def latest_is_personal_best?
+    latest >= personal_best
   end
 end
