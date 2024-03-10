@@ -6,6 +6,12 @@
 
 class Pangram
   def self.pangram?(sentence)
+    dictionary = self.dictionary
     nil if sentence.empty?
+    sentence.chars.uniq == dictionary
+  end
+
+  def self.dictionary
+    "abcdefghijklmnopqrstuvwxyz".chars
   end
 end

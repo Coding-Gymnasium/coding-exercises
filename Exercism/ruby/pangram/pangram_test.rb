@@ -1,5 +1,5 @@
-require 'minitest/autorun'
-require_relative 'pangram'
+require "minitest/autorun"
+require_relative "pangram"
 
 class PangramTest < Minitest::Test
   def test_empty_sentence
@@ -10,7 +10,7 @@ class PangramTest < Minitest::Test
   end
 
   def test_perfect_lower_case
-    skip
+    # skip
     sentence = "abcdefghijklmnopqrstuvwxyz"
     result = Pangram.pangram?(sentence)
     assert result, "Expected true, got: #{result.inspect}. #{sentence.inspect} IS a pangram"
