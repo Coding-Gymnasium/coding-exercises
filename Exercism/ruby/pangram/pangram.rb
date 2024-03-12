@@ -8,7 +8,11 @@ class Pangram
   def self.pangram?(sentence)
     dictionary = self.dictionary
     nil if sentence.empty?
-    sentence.chars.uniq == dictionary
+    downcase?(sentence) && sentence.gsub(/[[:space:]]/, "").chars.uniq.sort == dictionary
+  end
+
+  def self.downcase?(sentence)
+    sentence == sentence.downcase
   end
 
   def self.dictionary
