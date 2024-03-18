@@ -6,7 +6,7 @@
 
 class Pangram
   def self.pangram?(sentence)
-    new_sentence = sentence.downcase
+    new_sentence = sentence.downcase.tr("0-9", "")
     dictionary = self.dictionary
     nil if sentence.empty?
     downcase?(new_sentence) && new_sentence.gsub(/[[:space:]_.]/, "").chars.uniq.sort == dictionary
