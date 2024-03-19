@@ -59,7 +59,7 @@ class PangramTest < Minitest::Test
   end
 
   def test_mixed_case_and_punctuation
-    skip
+    # skip
     sentence = "\"Five quacking Zephyrs jolt my wax bed.\""
     result = Pangram.pangram?(sentence)
     assert result, "Expected true, got: #{result.inspect}. #{sentence.inspect} IS a pangram"

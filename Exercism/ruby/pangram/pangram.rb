@@ -6,10 +6,17 @@
 
 class Pangram
   def self.pangram?(sentence)
-    new_sentence = sentence.downcase.tr("0-9", "")
-    dictionary = self.dictionary
     nil if sentence.empty?
-    downcase?(new_sentence) && new_sentence.gsub(/[[:space:]_.]/, "").chars.uniq.sort == dictionary
+
+    new_sentence = cleanup_sentence(sentence)
+    dictionary = self.dictionary
+
+    downcase?(new_sentence.join("")) && new_sentence == dictionary
+  end
+
+  def self.cleanup_sentence(sentence)
+    new_sentence = sentence.downcase.tr("0-9", "")
+    new_sentence.gsub(/[[:space:]_.]/, "").chars.uniq.sort
   end
 
   def self.downcase?(sentence)
