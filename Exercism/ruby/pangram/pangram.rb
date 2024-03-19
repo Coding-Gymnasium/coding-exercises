@@ -16,7 +16,7 @@ class Pangram
 
   def self.cleanup_sentence(sentence)
     new_sentence = sentence.downcase.tr("0-9", "")
-    new_sentence.gsub(/[[:space:]_.]/, "").chars.uniq.sort
+    new_sentence.gsub(/[[:space:]_."]/, "").chars.uniq.sort
   end
 
   def self.downcase?(sentence)

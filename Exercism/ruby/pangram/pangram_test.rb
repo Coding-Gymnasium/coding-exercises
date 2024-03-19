@@ -66,7 +66,7 @@ class PangramTest < Minitest::Test
   end
 
   def test_a_m_and_a_m_are_26_different_characters_but_not_a_pangram
-    skip
+    # skip
     sentence = "abcdefghijklm ABCDEFGHIJKLM"
     result = Pangram.pangram?(sentence)
     refute result, "Expected false, got: #{result.inspect}. #{sentence.inspect} is NOT a pangram"
