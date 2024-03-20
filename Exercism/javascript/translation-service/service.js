@@ -41,7 +41,9 @@ export class TranslationService {
    * @returns {Promise<string[]>}
    */
   batch(texts) {
-    throw new Error("Implement the batch function");
+    texts.map((text) =>
+      this.api.fetch(text).then((response) => response.translation),
+    );
   }
 
   /**

@@ -44,7 +44,7 @@ describe("Free service", () => {
   });
 });
 
-xdescribe("Batch service", () => {
+describe("Batch service", () => {
   /** @type {TranslationService} */
   let service;
 
