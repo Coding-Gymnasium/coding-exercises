@@ -7,7 +7,11 @@
 class Robot
   attr_reader :bearing
 
+  DIRECTION = %i[east west north south].freeze
+
   def orient(direction)
+    raise ArgumentError, "Wrong type of argument" unless DIRECTION.include?(direction)
+
     @bearing = direction
   end
 end
