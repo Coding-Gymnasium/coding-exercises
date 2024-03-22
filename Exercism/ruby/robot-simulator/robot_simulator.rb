@@ -14,4 +14,17 @@ class Robot
 
     @bearing = direction
   end
+
+  def turn_right
+    case @bearing
+    when :north
+      @bearing = :east
+    when :east
+      @bearing = :south
+    when :south
+      @bearing = :west
+    when :west
+      @bearing = :north
+    end
+  end
 end
