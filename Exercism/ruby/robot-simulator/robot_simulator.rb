@@ -5,7 +5,7 @@
 # `ruby/robot-simulator` directory.
 
 class Robot
-  attr_reader :bearing
+  attr_reader :bearing, :coordinates
 
   DIRECTION = %i[east west north south].freeze
 
@@ -39,5 +39,9 @@ class Robot
     when :west
       @bearing = :south
     end
+  end
+
+  def at(north, east)
+    @coordinates = [north, east]
   end
 end
