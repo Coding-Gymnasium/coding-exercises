@@ -41,7 +41,16 @@ class Robot
     end
   end
 
-  def at(north, east)
-    @coordinates = [north, east]
+  def at(east, north)
+    @coordinates = [east, north]
+  end
+
+  def advance
+    case @bearing
+    when :north
+      @coordinates = [@coordinates[0], @coordinates[1] += 1]
+    when :east
+      @coordinates = [@coordinates[0] += 1, @coordinates[1]]
+    end
   end
 end
