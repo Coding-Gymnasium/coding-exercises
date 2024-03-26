@@ -51,6 +51,10 @@ class Robot
       @coordinates = [@coordinates[0], @coordinates[1] += 1]
     when :east
       @coordinates = [@coordinates[0] += 1, @coordinates[1]]
+    when :south
+      @coordinates = [@coordinates[0], @coordinates[1] -= 1]
+    when :west
+      @coordinates = [@coordinates[0] -= 1, @coordinates[1]]
     end
   end
 end
