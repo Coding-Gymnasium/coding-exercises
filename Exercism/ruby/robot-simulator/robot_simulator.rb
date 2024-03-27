@@ -58,3 +58,12 @@ class Robot
     end
   end
 end
+
+class Simulator
+  def instructions(direction)
+    case direction
+    when "L"
+      [:turn_left]
+    end
+  end
+end
