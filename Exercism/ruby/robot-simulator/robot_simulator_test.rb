@@ -139,12 +139,12 @@ class RobotSimulatorTest < Minitest::Test
   end
 
   def test_instructions_for_advancing
-    skip
+    # skip
     assert_equal [:advance], simulator.instructions("A")
   end
 
   def test_series_of_instructions
-    skip
+    # skip
     commands = %i[turn_right advance advance turn_left]
     assert_equal commands, simulator.instructions("RAAL")
   end

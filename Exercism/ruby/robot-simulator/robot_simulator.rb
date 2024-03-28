@@ -61,14 +61,18 @@ end
 
 class Simulator
   def instructions(direction)
-    case direction
-    when "L"
-      [:turn_left]
-    when "R"
-      [:turn_right]
-    when "A"
-      :advance
+    commands = []
+    direction_arr = direction.chars
+    direction_arr.each do |character|
+      case character
+      when "L"
+        commands.push(:turn_left)
+      when "R"
+        commands.push(:turn_right)
+      when "A"
+        commands.push(:advance)
+      end
     end
-    
+    commands
   end
 end
